@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\parkinkyung\\GitHub\\YourLocalShop\\YourLocalShop\\YourLocalShop.csproj": {}
+    "/Users/vzu/Projects/YourLocalShopApp/YourLocalShop/YourLocalShop.csproj": {}
   },
   "projects": {
-    "C:\\parkinkyung\\GitHub\\YourLocalShop\\YourLocalShop\\YourLocalShop.csproj": {
+    "/Users/vzu/Projects/YourLocalShopApp/YourLocalShop/YourLocalShop.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\parkinkyung\\GitHub\\YourLocalShop\\YourLocalShop\\YourLocalShop.csproj",
+        "projectUniqueName": "/Users/vzu/Projects/YourLocalShopApp/YourLocalShop/YourLocalShop.csproj",
         "projectName": "YourLocalShop",
-        "projectPath": "C:\\parkinkyung\\GitHub\\YourLocalShop\\YourLocalShop\\YourLocalShop.csproj",
-        "packagesPath": "C:\\Users\\park_\\.nuget\\packages\\",
-        "outputPath": "C:\\parkinkyung\\GitHub\\YourLocalShop\\YourLocalShop\\obj\\",
+        "projectPath": "/Users/vzu/Projects/YourLocalShopApp/YourLocalShop/YourLocalShop.csproj",
+        "packagesPath": "/Users/vzu/.nuget/packages/",
+        "outputPath": "/Users/vzu/Projects/YourLocalShopApp/YourLocalShop/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\park_\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/Users/vzu/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
@@ -62,7 +62,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.306/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.305/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

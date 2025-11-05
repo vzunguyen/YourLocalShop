@@ -1,14 +1,28 @@
-using YourLocalShop.Models; // <-- make sure this matches your repo namespace
+using YourLocalShop.Models;
+using YourLocalShop.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // MVC
 builder.Services.AddControllersWithViews();
 
+// SERVICES
+builder.Services.AddDistributedMemoryCache();
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromHours(12);
+    options.Cookie.Name = ".YourLocalShop.Session";
+    options.Cookie.HttpOnly = true;
+    options.Cookie.IsEssential = true;
+});
+builder.Services.AddHttpContextAccessor();
+builder.Services.AddScoped<ICartService, CartService>();
+
 // REPOSITORIES
 builder.Services.AddSingleton<ICategoriesRepository, CategoriesRepository>();
 builder.Services.AddSingleton<IProductsRepository, ProductsRepository>();
 builder.Services.AddSingleton<ICatalogueRepository, CatalogueRepository>();
+
 var app = builder.Build();
 
 // Pipeline
@@ -19,12 +33,13 @@ if (!app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-// If you’re not using MapStaticAssets for everything, also enable:
 // app.UseStaticFiles();
 
 app.UseRouting();
 
-// If you add Identity later, place UseAuthentication BEFORE UseAuthorization:
+// Enable session before auth/authorization/endpoints
+app.UseSession();
+
 // app.UseAuthentication();
 app.UseAuthorization();
 
