@@ -1,15 +1,29 @@
+using YourLocalShop.Models;
+using YourLocalShop.Services;
 using Microsoft.AspNetCore.Authentication.Cookies;
-using YourLocalShop.Models; // <-- make sure this matches your repo namespace
 
 var builder = WebApplication.CreateBuilder(args);
 
 // MVC
 builder.Services.AddControllersWithViews();
 
+// SERVICES
+builder.Services.AddDistributedMemoryCache();
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromHours(12);
+    options.Cookie.Name = ".YourLocalShop.Session";
+    options.Cookie.HttpOnly = true;
+    options.Cookie.IsEssential = true;
+});
+builder.Services.AddHttpContextAccessor();
+builder.Services.AddScoped<ICartService, CartService>();
+
 // REPOSITORIES
 builder.Services.AddSingleton<ICategoriesRepository, CategoriesRepository>();
 builder.Services.AddSingleton<IProductsRepository, ProductsRepository>();
 builder.Services.AddSingleton<ICatalogueRepository, CatalogueRepository>();
+
 builder.Services.AddSingleton<InMemoryUserStore>();
 
 builder.Services
@@ -38,14 +52,17 @@ app.UseRouting();
 
 // If you add Identity later, place UseAuthentication BEFORE UseAuthorization:
 app.UseAuthentication();
+// Enable session before auth/authorization/endpoints
+app.UseSession();
+
+// app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapStaticAssets();
 
 app.MapControllerRoute(
     name: "default",
-    // optional: land on Products list by default
-    pattern: "{controller=Products}/{action=Index}/{id?}"
+    pattern: "{controller=Home}/{action=Index}/{id?}"
 ).WithStaticAssets();
 
 app.Run();
