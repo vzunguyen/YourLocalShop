@@ -5,7 +5,7 @@ var builder = WebApplication.CreateBuilder(args);
 // MVC
 builder.Services.AddControllersWithViews();
 
-// REPOSITORIES (register these!)
+// REPOSITORIES
 builder.Services.AddSingleton<ICategoriesRepository, CategoriesRepository>();
 builder.Services.AddSingleton<IProductsRepository, ProductsRepository>();
 

@@ -18,10 +18,10 @@ public class CategoriesRepository : ICategoriesRepository
 
     public CategoriesRepository()
     {
-        // Seed a few default categories
-        Add(new Category { Name = "Dairy", Description = "Milk, eggs, cheese, yogurt" });
-        Add(new Category { Name = "Fruit & Veg", Description = "Fresh fruits and vegetables" });
-        Add(new Category { Name = "Bakery", Description = "Bread, pastries, and baked goods" });
+        Add(new Category { Name = "Pantry", Description = "Cereal, pasta, spreads, sauces" });
+        Add(new Category { Name = "Cleaning", Description = "Cleaning supplies and household products" });
+        Add(new Category { Name = "Drinks", Description = "Beverages, soft drinks and juices" });
+        Add(new Category { Name = "Snacks", Description = "Snacks and treats" });
     }
 
     public IEnumerable<Category> GetAll() => _store.Values.OrderBy(c => c.Name);
