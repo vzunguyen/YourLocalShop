@@ -1,0 +1,70 @@
+# Build
+bin/
+obj/
+out/
+
+# .NET user-specific
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Logs
+*.log
+logs/
+
+# VS Code
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# JetBrains Rider
+.idea/
+
+# macOS files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Packages
+*.nupkg
+*.snupkg
+
+# NuGet package directories
+packages/
+*.package
+
+# Generated files
+wwwroot/lib/
+node_modules/
+
+# Environment variables
+*.env
+.env*
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# Cache
+*.lock.json
+project.lock.json
+
+# Backup & temp
+*.tmp
+*.bak
+*.swp
+*.orig
+
+# Secrets
+secrets.json
+
+# SSL dev certs
+*.pfx
+*.p12
+
+# EF Migrations history
+Migrations/
+!Migrations/*.cs
+!Migrations/*.Designer.cs

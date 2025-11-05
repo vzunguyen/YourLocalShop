@@ -9,81 +9,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d3c084cf-7fc8-42d4-a06a-c255bc6e6aa4" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.YourLocalShopApp/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.YourLocalShopApp/.idea/indexLayout.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.YourLocalShopApp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.YourLocalShopApp/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/CategoriesController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/CategoriesController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/HomeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/HomeController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/ProductsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/ProductsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/Catalogue.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Catalogue.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/CatalogueRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/CatalogueRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/CategoriesRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/CategoriesRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/Category.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Category.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/Product.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Product.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/ProductsRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/ProductsRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/ViewModels/ProductSearchVm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/ViewModels/ProductSearchVm.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Home/Account.cshtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Home/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Home/Index.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Products/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Products/Index.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Products/_ProductCard.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Products/_ProductCard.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Shared/_Layout.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/YourLocalShop.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net9.0/YourLocalShop.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/YourLocalShop.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net9.0/YourLocalShop.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/YourLocalShop.staticwebassets.endpoints.json" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net9.0/YourLocalShop.staticwebassets.endpoints.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net9.0/YourLocalShop.staticwebassets.runtime.json" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net9.0/YourLocalShop.staticwebassets.runtime.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/YourLocalShop.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/YourLocalShop.AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/YourLocalShop.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/YourLocalShop.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/YourLocalShop.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/YourLocalShop.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/YourLocalShop.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/YourLocalShop.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/YourLocalShop.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/YourLocalShop.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/YourLocalShop.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/YourLocalShop.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/YourLocalShop.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/YourLocalShop.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/YourLocalShop.genruntimeconfig.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/YourLocalShop.genruntimeconfig.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/YourLocalShop.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/YourLocalShop.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/YourLocalShop.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/YourLocalShop.sourcelink.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/compressed/0904mkyo6r-nvvlpmu67g.gz" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/compressed/0904mkyo6r-nvvlpmu67g.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/compressed/0mjmgyllz4-jd9uben2k1.gz" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/compressed/0mjmgyllz4-jd9uben2k1.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/compressed/0yhxvudewa-r4e9w2rdcm.gz" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/compressed/0yhxvudewa-r4e9w2rdcm.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/compressed/4wl9j4ni3g-y7v9cxd14o.gz" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/compressed/4wl9j4ni3g-y7v9cxd14o.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/compressed/4ya83ujn1h-6pdc2jztkx.gz" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/compressed/4ya83ujn1h-6pdc2jztkx.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/compressed/5l7tp5u1kj-h1s4sie4z3.gz" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/compressed/5l7tp5u1kj-h1s4sie4z3.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/compressed/83av8ggcto-cosvhxvwiu.gz" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/compressed/83av8ggcto-cosvhxvwiu.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/compressed/9eizl47ilo-hrwsygsryq.gz" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/compressed/9eizl47ilo-hrwsygsryq.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/compressed/a9846hd6fb-kbrnm935zg.gz" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/compressed/a9846hd6fb-kbrnm935zg.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/compressed/akd028fetc-aexeepp0ev.gz" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/compressed/akd028fetc-aexeepp0ev.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/compressed/b3haamf0qt-v0zj4ognzu.gz" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/compressed/b3haamf0qt-v0zj4ognzu.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/compressed/b9gki6bhr0-pj5nd1wqec.gz" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/compressed/b9gki6bhr0-pj5nd1wqec.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/compressed/bhqigufy2a-iovd86k7lj.gz" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/compressed/bhqigufy2a-iovd86k7lj.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/compressed/coc4lq7b6m-fsbi9cje9m.gz" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/compressed/coc4lq7b6m-fsbi9cje9m.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/compressed/dc221n02jx-c2oey78nd0.gz" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/compressed/dc221n02jx-c2oey78nd0.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/compressed/f64yyf7b85-ee0r1s7dh0.gz" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/compressed/f64yyf7b85-ee0r1s7dh0.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/compressed/fhp00ix5us-c2jlpeoesf.gz" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/compressed/fhp00ix5us-c2jlpeoesf.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/compressed/h6p7pdl7ab-ttgo8qnofa.gz" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/compressed/h6p7pdl7ab-ttgo8qnofa.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/compressed/hi58s0koml-j5mq2jizvt.gz" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/compressed/hi58s0koml-j5mq2jizvt.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/compressed/hkmv50uxmv-fvhpjtyr6v.gz" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/compressed/hkmv50uxmv-fvhpjtyr6v.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/compressed/l4vxq10pau-ft3s53vfgj.gz" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/compressed/l4vxq10pau-ft3s53vfgj.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/compressed/lzj3dfhvzj-ausgxo2sd3.gz" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/compressed/lzj3dfhvzj-ausgxo2sd3.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/compressed/pvnzet8kbs-0j3bgjxly4.gz" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/compressed/pvnzet8kbs-0j3bgjxly4.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/compressed/s3hhfeeddi-87fc7y1x7t.gz" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/compressed/s3hhfeeddi-87fc7y1x7t.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/compressed/y9jztzq2ut-61n19gt1b8.gz" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/compressed/y9jztzq2ut-61n19gt1b8.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/rbcswa.dswa.cache.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/rbcswa.dswa.cache.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/ref/YourLocalShop.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/ref/YourLocalShop.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/refint/YourLocalShop.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/refint/YourLocalShop.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/rjimswa.dswa.cache.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/rjimswa.dswa.cache.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/rjsmcshtml.dswa.cache.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/rjsmcshtml.dswa.cache.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/rjsmrazor.dswa.cache.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/rjsmrazor.dswa.cache.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/rpswa.dswa.cache.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/rpswa.dswa.cache.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/staticwebassets.build.endpoints.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/staticwebassets.build.endpoints.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/staticwebassets.build.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/staticwebassets.build.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/staticwebassets.build.json.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/staticwebassets.build.json.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net9.0/staticwebassets.development.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net9.0/staticwebassets.development.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/YourLocalShop.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/YourLocalShop.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/YourLocalShop.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/obj/YourLocalShop.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/obj/rider.project.model.nuget.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/obj/rider.project.restore.info" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/YourLocalShopApp.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/YourLocalShopApp.sln.DotSettings.user" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,6 +23,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$APPLICATION_HOME_DIR$/plugins/restClient/lib/restClient.jar!/com/intellij/ws/rest/client/stubs/http-client.common.d.ts" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Users/douhaassafiri/Documents/uni/SWE30003 - Software Architectures and Design/assignment03/YourLocalShop/YourLocalShop/Controllers/HomeController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/douhaassafiri/Documents/uni/SWE30003 - Software Architectures and Design/assignment03/YourLocalShop/YourLocalShop/Controllers/HomeController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/douhaassafiri/Documents/uni/SWE30003 - Software Architectures and Design/assignment03/YourLocalShop/YourLocalShop/Models/Cart.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/douhaassafiri/Documents/uni/SWE30003 - Software Architectures and Design/assignment03/YourLocalShop/YourLocalShop/Program.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/douhaassafiri/Documents/uni/SWE30003 - Software Architectures and Design/assignment03/YourLocalShop/YourLocalShop/Program.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/wwwroot/lib/jquery/dist/jquery.min.map" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/00c5b61ca5b24691a72c7662470862cc7d28/11/b9dcc8c1/WebApplicationBuilder.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0db06c86da4d42158a497de456bcc8dacef08/ab/60802dab/Exception.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/94722ac1c9574afda41e4566a01b003412b10/61/906ee130/IUserStore`1.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -103,25 +42,25 @@
   &quot;associatedIndex&quot;: 2
 }</component>
   <component name="ProjectId" id="352gpxODlvUnUzqdH67JXeQCzBz" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;.NET Launch Settings Profile.backend: http.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/vzu/Projects/YourLocalShopApp/YourLocalShop/YourLocalShopApp.sln&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    ".NET Launch Settings Profile.backend: http.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "dart.analysis.tool.window.visible": "false",
+    "git-widget-placeholder": "douha",
+    "last_opened_file_path": "/Users/vzu/Projects/YourLocalShopApp/YourLocalShop/YourLocalShopApp.sln",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected=".NET Launch Settings Profile.backend: http">
     <configuration name="YourLocalShop: http" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/YourLocalShop.csproj" />
