@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/vzu/Projects/YourLocalShopApp/YourLocalShop/YourLocalShop.csproj": {}
+    "/Users/douhaassafiri/Documents/uni/SWE30003 - Software Architectures and Design/assignment03/YourLocalShop/YourLocalShop/YourLocalShop.csproj": {}
   },
   "projects": {
-    "/Users/vzu/Projects/YourLocalShopApp/YourLocalShop/YourLocalShop.csproj": {
+    "/Users/douhaassafiri/Documents/uni/SWE30003 - Software Architectures and Design/assignment03/YourLocalShop/YourLocalShop/YourLocalShop.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/vzu/Projects/YourLocalShopApp/YourLocalShop/YourLocalShop.csproj",
+        "projectUniqueName": "/Users/douhaassafiri/Documents/uni/SWE30003 - Software Architectures and Design/assignment03/YourLocalShop/YourLocalShop/YourLocalShop.csproj",
         "projectName": "YourLocalShop",
-        "projectPath": "/Users/vzu/Projects/YourLocalShopApp/YourLocalShop/YourLocalShop.csproj",
-        "packagesPath": "/Users/vzu/.nuget/packages/",
-        "outputPath": "/Users/vzu/Projects/YourLocalShopApp/YourLocalShop/obj/",
+        "projectPath": "/Users/douhaassafiri/Documents/uni/SWE30003 - Software Architectures and Design/assignment03/YourLocalShop/YourLocalShop/YourLocalShop.csproj",
+        "packagesPath": "/Users/douhaassafiri/.nuget/packages/",
+        "outputPath": "/Users/douhaassafiri/Documents/uni/SWE30003 - Software Architectures and Design/assignment03/YourLocalShop/YourLocalShop/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/vzu/.nuget/NuGet/NuGet.Config"
+          "/Users/douhaassafiri/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
@@ -62,7 +62,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.305/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/Users/douhaassafiri/.dotnet/sdk/9.0.306/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

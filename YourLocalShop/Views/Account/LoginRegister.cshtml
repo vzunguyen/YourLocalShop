@@ -1,0 +1,517 @@
+﻿@using YourLocalShop.Models.ViewModels
+@model AuthPageVm
+@{
+  ViewData["Title"] = "Account";
+  var startOnRegister = (Model?.ActiveTab ?? "login") == "register";
+}
+
+<div class="container py-5">
+  <div class="row justify-content-center">
+    <div class="col-md-7">
+      <div class="card shadow-sm">
+        <div class="card-body p-4">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <h3 class="m-0">@(startOnRegister ? "Create account" : "Welcome")</h3>
+            <button id="toggleForm" class="btn btn-sm btn-outline-secondary">
+              @(startOnRegister ? "Have an account? Log in" : "New here? Create account")
+            </button>
+          </div>
+
+          @* LOGIN *@
+          <section id="loginSection" class="@(startOnRegister ? "d-none" : "")">
+            <form id="loginForm" asp-action="Login" asp-controller="Account" method="post" novalidate
+                  class="needs-validation">
+              @Html.AntiForgeryToken()
+
+              <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+              <div class="mb-3">
+                <label class="form-label" for="Login_Email">Email</label>
+                <input class="form-control" id="Login_Email" name="Login.Email" type="email" required/>
+                <div id="Login_Email_feedback" class="invalid-feedback"></div>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label" for="Login_Password">Password</label>
+                <input class="form-control" id="Login_Password" name="Login.Password" type="password" required/>
+                <div class="invalid-feedback">Password is required.</div>
+              </div>
+
+              <div class="d-flex justify-content-end">
+                <button id="loginSubmit" class="btn btn-primary" type="submit" disabled>Log in</button>
+              </div>
+            </form>
+          </section>
+
+          @* REGISTER *@
+          <section id="registerSection" class="@(startOnRegister ? "" : "d-none") mt-2">
+            <form id="registerForm" asp-action="Register" asp-controller="Account" method="post" novalidate
+                  class="needs-validation">
+              @Html.AntiForgeryToken()
+
+              <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label class="form-label" for="Reg_FirstName">First name</label>
+                  <input class="form-control" id="Reg_FirstName" name="Register.FirstName" required/>
+                  <div class="invalid-feedback">First name is required.</div>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label class="form-label" for="Reg_LastName">Last name</label>
+                  <input class="form-control" id="Reg_LastName" name="Register.LastName" required/>
+                  <div class="invalid-feedback">Last name is required.</div>
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label" for="Reg_Email">Email</label>
+                <input class="form-control" id="Reg_Email" name="Register.Email" type="email" required/>
+                <div id="Reg_Email_feedback" class="invalid-feedback"></div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label class="form-label" for="Reg_Password">Password</label>
+                  <input class="form-control" id="Reg_Password" name="Register.Password" type="password"
+                         pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*\W).{8,}" required/>
+                  <small class="text-muted">8+ chars, upper, lower, number, symbol</small>
+                  <div id="Reg_Password_feedback" class="invalid-feedback"></div>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label class="form-label" for="Reg_Confirm">Confirm password</label>
+                  <input class="form-control" id="Reg_Confirm" name="Register.ConfirmPassword" type="password"
+                         required/>
+                  <div id="Reg_Confirm_feedback" class="invalid-feedback"></div>
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label" for="Reg_Phone">Phone</label>
+                <input class="form-control" id="Reg_Phone" name="Register.Phone" inputmode="numeric" required/>
+                <div id="Reg_Phone_feedback" class="invalid-feedback"></div>
+              </div>
+
+              <div class="row">
+                <div class="col-4 mb-3">
+                  <label class="form-label" for="Reg_StreetNumber">Street #</label>
+                  <input class="form-control" id="Reg_StreetNumber" name="Register.StreetNumber" inputmode="numeric"
+                         required/>
+                  <div id="Reg_StreetNumber_feedback" class="invalid-feedback"></div>
+                </div>
+                <div class="col-8 mb-3">
+                  <label class="form-label" for="Reg_StreetName">Street name</label>
+                  <input class="form-control" id="Reg_StreetName" name="Register.StreetName" required/>
+                  <div id="Reg_StreetName_feedback" class="invalid-feedback"></div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label class="form-label" for="Reg_City">City/Suburb</label>
+                  <input class="form-control" id="Reg_City" name="Register.City" required/>
+                  <div id="Reg_City_feedback" class="invalid-feedback"></div>
+                </div>
+                <div class="col-md-3 mb-3">
+                  <label class="form-label" for="Reg_State">State</label>
+                  <input class="form-control" id="Reg_State" name="Register.State" value="VIC" placeholder="VIC"/>
+                  <div id="Reg_State_feedback" class="invalid-feedback"></div>
+                </div>
+                <div class="col-md-3 mb-3">
+                  <label class="form-label" for="Reg_PostCode">Postcode</label>
+                  <input class="form-control" id="Reg_PostCode" name="Register.PostCode" inputmode="numeric" required/>
+                  <div id="Reg_PostCode_feedback" class="invalid-feedback"></div>
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label" for="Reg_Country">Country</label>
+                <input class="form-control" id="Reg_Country" name="Register.Country" value="Australia"/>
+                <div id="Reg_Country_feedback" class="invalid-feedback"></div>
+              </div>
+
+              <div class="d-flex justify-content-end">
+                <button id="registerSubmit" class="btn btn-success" type="submit" disabled>Create account</button>
+              </div>
+            </form>
+          </section>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+@section Scripts {
+  <script>
+    // helpers
+    const emailRe = /^[^@@\s]+@@[^@@\s]+\.[^@@\s]+$/;
+    const pwdRe = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*\W).{8,}$/;
+    const phoneRe = /^\d{8,15}$/;
+    const stateRe = /^(VIC|NSW|QLD|SA|WA|TAS|ACT|NT)$/i;
+    const pcRe = /^\d{4}$/;
+
+    const setValid = (el, fb, msg = '') => {
+      el.classList.add('is-valid');
+      el.classList.remove('is-invalid');
+      if (fb) fb.textContent = msg;
+    }
+    const setInvalid = (el, fb, msg) => {
+      el.classList.add('is-invalid');
+      el.classList.remove('is-valid');
+      if (fb) fb.textContent = msg;
+    }
+    const clearState = (el, fb) => {
+      el.classList.remove('is-valid', 'is-invalid');
+      if (fb) fb.textContent = '';
+    }
+    const debounce = (fn, d = 300) => {
+      let t;
+      return (...a) => {
+        clearTimeout(t);
+        t = setTimeout(() => fn(...a), d);
+      }
+    };
+
+    // toggle login/register
+    const toggleBtn = document.getElementById('toggleForm');
+    const loginSec = document.getElementById('loginSection');
+    const regSec = document.getElementById('registerSection');
+    if (toggleBtn) {
+      toggleBtn.addEventListener('click', () => {
+        loginSec.classList.toggle('d-none');
+        regSec.classList.toggle('d-none');
+        toggleBtn.textContent = regSec.classList.contains('d-none') ? 'New here? Create account' : 'Have an account? Log in';
+      });
+    }
+
+    // LOGIN
+    (() => {
+      const form = document.getElementById('loginForm');
+      if (!form) return;
+
+      const email = document.getElementById('Login_Email');
+      const pass = document.getElementById('Login_Password');
+      const fb = document.getElementById('Login_Email_feedback');
+      const submit = document.getElementById('loginSubmit');
+      const token = form.querySelector('input[name="__RequestVerificationToken"]').value;
+
+      let emailOk = false, existsOk = false, passOk = false;
+
+      const checkEnable = () => {
+        submit.disabled = !(emailOk && existsOk && passOk);
+      };
+
+      // email format
+      email.addEventListener('input', () => {
+        existsOk = false; // re-check existence when email changes
+        if (!email.value) {
+          clearState(email, fb);
+          emailOk = false;
+          checkEnable();
+          return;
+        }
+        if (emailRe.test(email.value)) {
+          setValid(email, fb);
+          emailOk = true;
+        } else {
+          setInvalid(email, fb, 'Enter a valid email like name@example.com');
+          emailOk = false;
+        }
+        checkEnable();
+      });
+
+      // live "email exists?" AJAX
+      const pingExists = debounce(async () => {
+        if (!emailOk) {
+          existsOk = false;
+          checkEnable();
+          return;
+        }
+        try {
+          const resp = await fetch('@Url.Action("CheckEmail", "Account")', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+            body: new URLSearchParams({email: email.value, __RequestVerificationToken: token})
+          });
+          const data = await resp.json();
+          if (data.exists) {
+            // keep email valid
+            setValid(email, fb);
+            existsOk = true;
+          } else {
+            setInvalid(email, fb, 'No account with that email.');
+            existsOk = false;
+          }
+        } catch {
+          setInvalid(email, fb, 'Could not verify email right now.');
+          existsOk = false;
+        }
+        checkEnable();
+      }, 350);
+
+      email.addEventListener('blur', pingExists);
+      email.addEventListener('input', pingExists);
+
+      // password presence
+      pass.addEventListener('input', () => {
+        passOk = !!pass.value;
+        if (passOk) {
+          pass.classList.add('is-valid');
+          pass.classList.remove('is-invalid');
+        } else {
+          pass.classList.add('is-invalid');
+          pass.classList.remove('is-valid');
+        }
+        checkEnable();
+      });
+
+      checkEnable();
+    })();
+
+    // REGISTER
+    (() => {
+      const form = document.getElementById('registerForm');
+      if (!form) return;
+
+      const token = form.querySelector('input[name="__RequestVerificationToken"]').value;
+
+      const first = document.getElementById('Reg_FirstName');
+      const last = document.getElementById('Reg_LastName');
+      const email = document.getElementById('Reg_Email');
+      const pwd = document.getElementById('Reg_Password');
+      const conf = document.getElementById('Reg_Confirm');
+      const phone = document.getElementById('Reg_Phone');
+      const snum = document.getElementById('Reg_StreetNumber');
+      const sname = document.getElementById('Reg_StreetName');
+      const city = document.getElementById('Reg_City');
+      const state = document.getElementById('Reg_State');
+      const pc = document.getElementById('Reg_PostCode');
+      const country = document.getElementById('Reg_Country');
+
+      const fbEmail = document.getElementById('Reg_Email_feedback');
+      const fbPwd = document.getElementById('Reg_Password_feedback');
+      const fbConf = document.getElementById('Reg_Confirm_feedback');
+      const fbPhone = document.getElementById('Reg_Phone_feedback');
+      const fbSNum = document.getElementById('Reg_StreetNumber_feedback');
+      const fbSName = document.getElementById('Reg_StreetName_feedback');
+      const fbCity = document.getElementById('Reg_City_feedback');
+      const fbState = document.getElementById('Reg_State_feedback');
+      const fbPc = document.getElementById('Reg_PostCode_feedback');
+      const fbCtry = document.getElementById('Reg_Country_feedback');
+
+      const submit = document.getElementById('registerSubmit');
+
+      if (!state.value) state.value = "VIC";
+      if (!country.value) country.value = "Australia";
+
+      ok = {
+        first: false,
+        last: false,
+        email: false,
+        emailFree: false,
+        pwd: false,
+        conf: false,
+        phone: false,
+        snum: false,
+        sname: false,
+        city: false,
+        state: true,
+        pc: false,
+        country: true
+      };
+
+      const enable = () => {
+        submit.disabled = !Object.values(ok).every(Boolean);
+      };
+
+      first.addEventListener('input', () => {
+        ok.first = !!first.value.trim();
+        ok.first ? setValid(first) : setInvalid(first, null, 'Required');
+        enable();
+      });
+      last.addEventListener('input', () => {
+        ok.last = !!last.value.trim();
+        ok.last ? setValid(last) : setInvalid(last, null, 'Required');
+        enable();
+      });
+
+      // email format + duplicate check
+      const checkEmailFree = debounce(async () => {
+        if (!ok.email) {
+          ok.emailFree = false;
+          enable();
+          return;
+        }
+        try {
+          const resp = await fetch('@Url.Action("CheckEmail", "Account")', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+            body: new URLSearchParams({email: email.value, __RequestVerificationToken: token})
+          });
+          const data = await resp.json();
+          if (data.exists) {
+            setInvalid(email, fbEmail, 'Email already registered.');
+            ok.emailFree = false;
+          } else {
+            setValid(email, fbEmail);
+            ok.emailFree = true;
+          }
+        } catch {
+          setInvalid(email, fbEmail, 'Could not verify email right now.');
+          ok.emailFree = false;
+        }
+        enable();
+      }, 350);
+
+      email.addEventListener('input', () => {
+        if (!email.value) {
+          clearState(email, fbEmail);
+          ok.email = false;
+          ok.emailFree = false;
+          enable();
+          return;
+        }
+        if (emailRe.test(email.value)) {
+          setValid(email, fbEmail);
+          ok.email = true;
+        } else {
+          setInvalid(email, fbEmail, 'Enter a valid email like name@example.com');
+          ok.email = false;
+        }
+        ok.emailFree = false;
+        checkEmailFree();
+        enable();
+      });
+      email.addEventListener('blur', checkEmailFree);
+
+      // password strength + confirm
+      const validatePwd = () => {
+        if (!pwd.value) {
+          clearState(pwd, fbPwd);
+          ok.pwd = false;
+          return;
+        }
+        if (pwdRe.test(pwd.value)) {
+          setValid(pwd, fbPwd);
+          ok.pwd = true;
+        } else {
+          setInvalid(pwd, fbPwd, 'Must include upper, lower, number, symbol, 8+ chars.');
+          ok.pwd = false;
+        }
+      };
+      const validateConf = () => {
+        if (!conf.value) {
+          clearState(conf, fbConf);
+          ok.conf = false;
+          return;
+        }
+        if (conf.value === pwd.value) {
+          setValid(conf, fbConf);
+          ok.conf = true;
+        } else {
+          setInvalid(conf, fbConf, 'Passwords do not match.');
+          ok.conf = false;
+        }
+      };
+      pwd.addEventListener('input', () => {
+        validatePwd();
+        validateConf();
+        enable();
+      });
+      conf.addEventListener('input', () => {
+        validateConf();
+        enable();
+      });
+
+      // phone
+      phone.addEventListener('input', () => {
+        if (phoneRe.test(phone.value)) {
+          setValid(phone, fbPhone);
+          ok.phone = true;
+        } else {
+          setInvalid(phone, fbPhone, 'Digits only (8–15).');
+          ok.phone = false;
+        }
+        enable();
+      });
+
+      // street number (allow digits + optional letter)
+      snum.addEventListener('input', () => {
+        const re = /^\d+[A-Za-z]?$/;
+        if (re.test(snum.value)) {
+          setValid(snum, fbSNum);
+          ok.snum = true;
+        } else {
+          setInvalid(snum, fbSNum, 'e.g., 12 or 12A');
+          ok.snum = false;
+        }
+        enable();
+      });
+
+      // street name
+      sname.addEventListener('input', () => {
+        const re = /^[A-Za-z0-9\s.'-]{2,}$/;
+        if (re.test(sname.value)) {
+          setValid(sname, fbSName);
+          ok.sname = true;
+        } else {
+          setInvalid(sname, fbSName, 'Please enter a valid street name.');
+          ok.sname = false;
+        }
+        enable();
+      });
+
+      // city
+      city.addEventListener('input', () => {
+        const re = /^[A-Za-z\s.'-]{2,}$/;
+        if (re.test(city.value)) {
+          setValid(city, fbCity);
+          ok.city = true;
+        } else {
+          setInvalid(city, fbCity, 'Please enter a valid suburb/city.');
+          ok.city = false;
+        }
+        enable();
+      });
+
+      // AU state
+      state.addEventListener('input', () => {
+        if (stateRe.test(state.value)) {
+          setValid(state, fbState);
+          ok.state = true;
+        } else {
+          setInvalid(state, fbState, 'Use VIC/NSW/QLD/SA/WA/TAS/ACT/NT');
+          ok.state = false;
+        }
+        enable();
+      });
+
+      // postcode
+      pc.addEventListener('input', () => {
+        if (pcRe.test(pc.value)) {
+          setValid(pc, fbPc);
+          ok.pc = true;
+        } else {
+          setInvalid(pc, fbPc, '4 digits');
+          ok.pc = false;
+        }
+        enable();
+      });
+
+      // country (non-empty)
+      country.addEventListener('input', () => {
+        if (country.value.trim().length >= 2) {
+          setValid(country, fbCtry);
+          ok.country = true;
+        } else {
+          setInvalid(country, fbCtry, 'Required');
+          ok.country = false;
+        }
+        enable();
+      });
+
+      enable();
+    })();
+  </script>
+}
