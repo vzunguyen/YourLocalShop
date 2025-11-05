@@ -1,6 +1,46 @@
+using System.Collections.Concurrent;
+
 namespace YourLocalShop.Models;
 
-public class ProductsRepository
+public interface IProductsRepository
 {
-    
+    IQueryable<Product> Query();
+    IEnumerable<Product> GetAll();
+    Product? GetById(int id);
+    Product Add(Product p);
+    void Update(Product p);
+    bool Delete(int id);
+}
+
+public class ProductsRepository : IProductsRepository
+{
+    private readonly ConcurrentDictionary<int, Product> _store = new();
+    private int _nextId = 1;
+
+    public ProductsRepository()
+    {
+        // Seed (CategoryId should match your CategoriesRepository seeds)
+        Add(new Product { Name = "Milk 1L", Price = 2.39m, StockQty = 100, CategoryId = 1});
+        Add(new Product { Name = "Bananas (kg)", Price = 3.49m, StockQty = 80, CategoryId = 2});
+        Add(new Product { Name = "Eggs (dozen)", Price = 5.99m, StockQty = 60, CategoryId = 1});
+    }
+
+    public IQueryable<Product> Query() => _store.Values.AsQueryable();
+    public IEnumerable<Product> GetAll() => _store.Values.OrderBy(p => p.Name);
+    public Product? GetById(int id) => _store.TryGetValue(id, out var p) ? p : null;
+
+    public Product Add(Product p)
+    {
+        p.Id = Interlocked.Increment(ref _nextId);
+        _store[p.Id] = p;
+        return p;
+    }
+
+    public void Update(Product p)
+    {
+        if (!_store.ContainsKey(p.Id)) throw new ArgumentException("Product not found");
+        _store[p.Id] = p;
+    }
+
+    public bool Delete(int id) => _store.TryRemove(id, out _);
 }
