@@ -10,11 +10,13 @@
         <input name="q" value="@Model.Q" class="form-control" placeholder="Search products..." />
     </div>
     <div class="col-sm-4">
-        <select name="categoryId" class="form-select">
+        <select name="category" class="form-select">
             <option value="">All categories</option>
-            @foreach (var cat in Model.Categories)
+            @foreach (var name in Model.Categories)
             {
-                <option value="@cat.Id" selected="@(Model.CategoryId == cat.Id)">@cat.Name</option>
+                <option value="@name" selected="@(string.Equals(Model.Category, name, StringComparison.OrdinalIgnoreCase))">
+                    @name
+                </option>
             }
         </select>
     </div>
@@ -42,8 +44,9 @@ else
                 <a class="page-link"
                    asp-action="Index"
                    asp-route-q="@Model.Q"
-                   asp-route-categoryId="@Model.CategoryId"
-                   asp-route-page="@(Model.Page - 1)">Previous</a>
+                   asp-route-category="@Model.Category"
+                   asp-route-page="@(Model.Page - 1)"
+                   asp-route-pageSize="@Model.PageSize">Previous</a>
             </li>
 
             @for (var i = 1; i <= Model.TotalPages; i++)
@@ -52,8 +55,9 @@ else
                     <a class="page-link"
                        asp-action="Index"
                        asp-route-q="@Model.Q"
-                       asp-route-categoryId="@Model.CategoryId"
-                       asp-route-page="@i">@i</a>
+                       asp-route-category="@Model.Category"
+                       asp-route-page="@i"
+                       asp-route-pageSize="@Model.PageSize">@i</a>
                 </li>
             }
 
@@ -61,8 +65,9 @@ else
                 <a class="page-link"
                    asp-action="Index"
                    asp-route-q="@Model.Q"
-                   asp-route-categoryId="@Model.CategoryId"
-                   asp-route-page="@(Model.Page + 1)">Next</a>
+                   asp-route-category="@Model.Category"
+                   asp-route-page="@(Model.Page + 1)"
+                   asp-route-pageSize="@Model.PageSize">Next</a>
             </li>
         </ul>
     </nav>

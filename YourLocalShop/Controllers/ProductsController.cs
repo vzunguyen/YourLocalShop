@@ -6,50 +6,40 @@ namespace YourLocalShop.Controllers;
 
 public class ProductsController : Controller
 {
-    private readonly IProductsRepository _products;
-    private readonly ICategoriesRepository _categories;
+    private readonly ICatalogueRepository _catalogue;
 
-    public ProductsController(IProductsRepository products, ICategoriesRepository categories)
+    public ProductsController(ICatalogueRepository catalogue)
     {
-        _products = products;
-        _categories = categories;
+        _catalogue = catalogue;
     }
 
-    // /Products?q=milk&categoryId=1&page=1
+    // /Products?q=milk&category=Dairy&page=1&pageSize=12
     [HttpGet]
-    public IActionResult Index(string? q, int? categoryId, int page = 1, int pageSize = 12)
+    public IActionResult Index(string? q, string? category, int page = 1, int pageSize = 12)
     {
-        var query = _products.Query();
-
-        if (!string.IsNullOrWhiteSpace(q))
-        {
-            var s = q.Trim().ToLower();
-            query = query.Where(p =>
-                p.Name.ToLower().Contains(s) ||
-                (p.Description != null && p.Description.ToLower().Contains(s)));
-        }
-
-        if (categoryId.HasValue)
-            query = query.Where(p => p.CategoryId == categoryId.Value);
-
-        var total = query.Count();
-        var items = query
-            .OrderBy(p => p.Name)
-            .Skip((page - 1) * pageSize)
+        var all = _catalogue.Search(q, category);
+        var total = all.Count();
+        var items = all.Skip((page - 1) * pageSize)
             .Take(pageSize)
             .ToList();
 
         var vm = new ProductSearchVm
         {
             Q = q,
-            CategoryId = categoryId,
-            Categories = _categories.GetAll().OrderBy(c => c.Name),
+            Category = category,
+            Categories = _catalogue.GetCategories(),
             Results = items,
             Page = page,
-            PageSize = pageSize,
-            TotalPages = Math.Max(1, (int)Math.Ceiling(total / (double)pageSize))
+            TotalPages = Math.Max(1, (int)Math.Ceiling(total / (double)pageSize)),
+            PageSize = pageSize
         };
 
         return View(vm);
+    }
+
+    public IActionResult Details(int id)
+    {
+        var p = _catalogue.GetProductById(id);
+        return p is null ? NotFound() : View(p);
     }
 }

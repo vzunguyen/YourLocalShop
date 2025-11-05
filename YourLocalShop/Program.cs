@@ -8,7 +8,7 @@ builder.Services.AddControllersWithViews();
 // REPOSITORIES
 builder.Services.AddSingleton<ICategoriesRepository, CategoriesRepository>();
 builder.Services.AddSingleton<IProductsRepository, ProductsRepository>();
-
+builder.Services.AddSingleton<ICatalogueRepository, CatalogueRepository>();
 var app = builder.Build();
 
 // Pipeline

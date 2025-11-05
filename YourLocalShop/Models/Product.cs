@@ -18,6 +18,5 @@ public class Product
     [Range(0, int.MaxValue)]
     public int StockQty { get; set; }
 
-    [Required]
-    public int CategoryId { get; set; }
+    [Required] public string CategoryName { get; set; } = "";
 }
