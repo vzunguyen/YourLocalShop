@@ -13,11 +13,11 @@ public class ProductsController : Controller
         _catalogue = catalogue;
     }
 
-    // /Products?q=milk&category=Dairy&page=1&pageSize=12
+    // /Products?q=milk&categoryId=1&page=1&pageSize=12
     [HttpGet]
-    public IActionResult Index(string? q, string? category, int page = 1, int pageSize = 12)
+    public IActionResult Index(string? q, int? categoryId, int page = 1, int pageSize = 12)
     {
-        var all = _catalogue.Search(q, category);
+        var all = _catalogue.Search(q, categoryId);
         var total = all.Count();
         var items = all.Skip((page - 1) * pageSize)
             .Take(pageSize)
@@ -26,7 +26,7 @@ public class ProductsController : Controller
         var vm = new ProductSearchVm
         {
             Q = q,
-            Category = category,
+            CategoryId = categoryId,
             Categories = _catalogue.GetCategories(),
             Results = items,
             Page = page,
@@ -37,6 +37,7 @@ public class ProductsController : Controller
         return View(vm);
     }
 
+    // GET: /Products/Details/5
     public IActionResult Details(int id)
     {
         var p = _catalogue.GetProductById(id);

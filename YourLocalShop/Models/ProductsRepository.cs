@@ -15,7 +15,7 @@ public interface IProductsRepository
 public class ProductsRepository : IProductsRepository
 {
     private readonly ConcurrentDictionary<int, Product> _store = new();
-    private int _nextId = 1;
+    private int _nextId = 0;    // start at 0 so first product gets Id = 1
 
     public IQueryable<Product> Query() => _store.Values.AsQueryable();
     public IEnumerable<Product> GetAll() => _store.Values.OrderBy(p => p.Name);

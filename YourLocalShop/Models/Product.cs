@@ -18,5 +18,9 @@ public class Product
     [Range(0, int.MaxValue)]
     public int StockQty { get; set; }
 
-    [Required] public string CategoryName { get; set; } = "";
+    // Explicit relationship to Category
+    [Required] public int CategoryId { get; set; }
+
+    // Navigation property
+    public Category? Category { get; set; }
 }
