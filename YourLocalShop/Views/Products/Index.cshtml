@@ -10,12 +10,12 @@
         <input name="q" value="@Model.Q" class="form-control" placeholder="Search products..." />
     </div>
     <div class="col-sm-4">
-        <select name="category" class="form-select">
+        <select name="categoryId" class="form-select">
             <option value="">All categories</option>
-            @foreach (var name in Model.Categories)
+            @foreach (var cat in Model.Categories)
             {
-                <option value="@name" selected="@(string.Equals(Model.Category, name, StringComparison.OrdinalIgnoreCase))">
-                    @name
+                <option value="@cat.Id" selected="@(Model.CategoryId == cat.Id)">
+                    @cat.Name
                 </option>
             }
         </select>

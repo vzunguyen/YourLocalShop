@@ -32,8 +32,7 @@ app.MapStaticAssets();
 
 app.MapControllerRoute(
     name: "default",
-    // optional: land on Products list by default
-    pattern: "{controller=Products}/{action=Index}/{id?}"
+    pattern: "{controller=Home}/{action=Index}/{id?}"
 ).WithStaticAssets();
 
 app.Run();

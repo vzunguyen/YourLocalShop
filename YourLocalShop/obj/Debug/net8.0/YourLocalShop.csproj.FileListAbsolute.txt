@@ -1,0 +1,8 @@
+C:\parkinkyung\GitHub\YourLocalShop\YourLocalShop\obj\Debug\net8.0\YourLocalShop.GeneratedMSBuildEditorConfig.editorconfig
+C:\parkinkyung\GitHub\YourLocalShop\YourLocalShop\obj\Debug\net8.0\YourLocalShop.AssemblyInfoInputs.cache
+C:\parkinkyung\GitHub\YourLocalShop\YourLocalShop\obj\Debug\net8.0\YourLocalShop.AssemblyInfo.cs
+C:\parkinkyung\GitHub\YourLocalShop\YourLocalShop\obj\Debug\net8.0\YourLocalShop.csproj.CoreCompileInputs.cache
+C:\parkinkyung\GitHub\YourLocalShop\YourLocalShop\obj\Debug\net8.0\YourLocalShop.MvcApplicationPartsAssemblyInfo.cache
+C:\parkinkyung\GitHub\YourLocalShop\YourLocalShop\obj\Debug\net8.0\YourLocalShop.RazorAssemblyInfo.cache
+C:\parkinkyung\GitHub\YourLocalShop\YourLocalShop\obj\Debug\net8.0\YourLocalShop.RazorAssemblyInfo.cs
+C:\parkinkyung\GitHub\YourLocalShop\YourLocalShop\obj\Debug\net8.0\YourLocalShop.sourcelink.json

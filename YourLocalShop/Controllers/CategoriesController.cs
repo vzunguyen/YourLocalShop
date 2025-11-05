@@ -49,6 +49,9 @@ public class CategoriesController : Controller
     public IActionResult Edit(Category c)
     {
         if (!ModelState.IsValid) return View(c);
+        var existing = _categories.GetById(c.Id);
+        if (existing == null) return NotFound();
+        
         _categories.Update(c);
         return RedirectToAction(nameof(Index));
     }
@@ -61,8 +64,8 @@ public class CategoriesController : Controller
         return View(c);
     }
 
-    // POST: /Categories/DeleteConfirmed/1
-    [HttpPost, ActionName("DeleteConfirmed")]
+    // POST: /Categories/Delete/1
+    [HttpPost, ActionName("Delete")]
     [ValidateAntiForgeryToken]
     public IActionResult DeleteConfirmed(int id)
     {
