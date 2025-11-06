@@ -1,6 +1,7 @@
 using YourLocalShop.Models;
 using YourLocalShop.Services;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using YourLocalShop.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -23,6 +24,8 @@ builder.Services.AddScoped<ICartService, ShoppingCartService>();
 builder.Services.AddSingleton<ICatalogueRepository, CatalogueRepository>();
 
 builder.Services.AddSingleton<UsersRepository>();
+
+builder.Services.AddSingleton<OrdersRepository>();
 
 builder.Services
     .AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)

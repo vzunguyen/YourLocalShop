@@ -1,0 +1,52 @@
+[
+  {
+    "Id": 1,
+    "CustomerId": 4,
+    "Customer": {
+      "Phone": "0564135649",
+      "Address": {
+        "UnitNumber": null,
+        "StreetNumber": "110",
+        "StreetName": "Queens Street",
+        "City": "Richmond",
+        "State": "VIC",
+        "Country": "Australia",
+        "PostCode": "3121"
+      },
+      "Role": "Customer",
+      "Id": 6,
+      "FirstName": "Bob",
+      "LastName": "Smith",
+      "Email": "bobsmith@mail.com",
+      "PasswordHash": ""
+    },
+    "OrderDate": "2025-11-06T22:25:57.0373681+11:00",
+    "Items": [
+      {
+        "ProductId": 10,
+        "Name": "BBQ Sauce 500ml",
+        "UnitPrice": 4.20,
+        "Quantity": 1,
+        "Subtotal": 4.20
+      },
+      {
+        "ProductId": 16,
+        "Name": "Coke 1.25L",
+        "UnitPrice": 4.00,
+        "Quantity": 1,
+        "Subtotal": 4.00
+      },
+      {
+        "ProductId": 13,
+        "Name": "Dishwashing Liquid 800ml",
+        "UnitPrice": 9.00,
+        "Quantity": 1,
+        "Subtotal": 9.00
+      }
+    ],
+    "Total": 17.20,
+    "Status": "Successful",
+    "InvoiceId": "INV-638980251570374079",
+    "ReceiptId": "RCP-638980253155899363"
+  }
+]

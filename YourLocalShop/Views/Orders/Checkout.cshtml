@@ -8,27 +8,28 @@
 <form asp-action="Checkout" method="post">
     @Html.AntiForgeryToken()
     <!-- Account details (read-only, prefilled from logged-in Customer) -->
-        <div>
-            <label asp-for="Customer.FirstName"></label>
-            <input asp-for="Customer.FirstName" />
+    <h3 class="mt-4">Recipient Details</h3>
+        <div class="mb-3">
+            <label asp-for="Customer.FirstName" class="form-label"></label>
+            <input asp-for="Customer.FirstName" class="form-control"/>
             <span asp-validation-for="Customer.FirstName"></span>
         </div>
 
-        <div>
-            <label asp-for="Customer.LastName"></label>
-            <input asp-for="Customer.LastName" />
+        <div class="mb-3">
+            <label asp-for="Customer.LastName" class="form-label"></label>
+            <input asp-for="Customer.LastName" class="form-control"/>
             <span asp-validation-for="Customer.LastName"></span>
         </div>
 
-        <div>
-            <label asp-for="Customer.Email"></label>
-            <input asp-for="Customer.Email" />
+        <div class="mb-3">
+            <label asp-for="Customer.Email" class="form-label"></label>
+            <input asp-for="Customer.Email" class="form-control"/>
             <span asp-validation-for="Customer.Email"></span>
         </div>
 
-        <div>
-            <label asp-for="Customer.Phone"></label>
-            <input asp-for="Customer.Phone" />
+        <div class="mb-3">
+            <label asp-for="Customer.Phone" class="form-label"></label>
+            <input asp-for="Customer.Phone" class="form-control"/>
             <span asp-validation-for="Customer.Phone"></span>
         </div>
 
@@ -98,22 +99,24 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach (var item in Model.Items)
+                @for (int i = 0; i < Model.Items.Count; i++)
                 {
                     <tr>
-                        <td>@item.Name</td>
-                        <td class="text-end">$@item.UnitPrice</td>
-                        <td class="text-end">@item.Quantity</td>
-                        <td class="text-end">$@item.Subtotal</td>
+                        <td>@Model.Items[i].Name</td>
+                        <td class="text-end">$@Model.Items[i].UnitPrice</td>
+                        <td class="text-end">@Model.Items[i].Quantity</td>
+                        <td class="text-end">$@Model.Items[i].Subtotal</td>
                     </tr>
+
+                    <!-- Hidden inputs so Items bind back -->
+                    <input type="hidden" asp-for="Items[i].ProductId" />
+                    <input type="hidden" asp-for="Items[i].Name" />
+                    <input type="hidden" asp-for="Items[i].UnitPrice" />
+                    <input type="hidden" asp-for="Items[i].Quantity" />
+                    <input type="hidden" asp-for="Items[i].Subtotal" />
                 }
+                <input type="hidden" asp-for="Total" />
             </tbody>
-            <tfoot>
-                <tr>
-                    <th colspan="3" class="text-end">Total</th>
-                    <th class="text-end">$@Model.Total</th>
-                </tr>
-            </tfoot>
         </table>
     </div>
 

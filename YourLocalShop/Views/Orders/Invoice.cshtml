@@ -58,19 +58,19 @@
     <div class="mb-3">
         <label>Card Number</label>
         <input asp-for="Payment.CardNumber" class="form-control" />
-        <span asp-validation-for="Payment.CardNumber"></span>
+        <span asp-validation-for="Payment.CardNumber" class="text-danger"></span>
     </div>
 
     <div class="row">
         <div class="col-md-6 mb-3">
             <label>Expiry (MM/YY)</label>
             <input asp-for="Payment.Expiry" class="form-control" />
-            <span asp-validation-for="Payment.Expiry"></span>
+            <span asp-validation-for="Payment.Expiry" class="text-danger"></span>
         </div>
         <div class="col-md-6 mb-3">
             <label>CVC</label>
             <input asp-for="Payment.CVC" class="form-control" />
-            <span asp-validation-for="Payment.CVC"></span>
+            <span asp-validation-for="Payment.CVC" class="text-danger"></span>
         </div>
     </div>
 

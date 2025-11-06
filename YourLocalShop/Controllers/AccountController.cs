@@ -6,10 +6,11 @@ using Microsoft.AspNetCore.Authentication.Cookies;
 using System.Security.Claims;
 using YourLocalShop.Models;
 using YourLocalShop.Models.ViewModels;
+using YourLocalShop.Data;
 
 namespace YourLocalShop.Controllers
 {
-    public class AccountController(UsersRepository users) : Controller
+    public class AccountController(UsersRepository users, OrdersRepository ordersRepo) : Controller
     {
         // GET: /Account/LoginOnly
         [HttpGet]
@@ -270,6 +271,26 @@ namespace YourLocalShop.Controllers
                 new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme));
 
             await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal);
+        }
+        
+        // GET: /Account/OrderHistory
+        [HttpGet]
+        [Authorize]
+        public IActionResult OrderHistory()
+        {
+            var email = User.FindFirstValue(ClaimTypes.Email);
+            var customer = users.FindByEmail(email) as Customer;
+            if (customer == null)
+            {
+                return RedirectToAction(nameof(LoginOnly));
+            }
+
+            var orders = ordersRepo.GetAll()
+                .Where(o => o.CustomerId == customer.Id)
+                .OrderByDescending(o => o.OrderDate)
+                .ToList();
+
+            return View(orders); // Views/Account/OrderHistory.cshtml
         }
     }
 }

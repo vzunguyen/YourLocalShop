@@ -1,5 +1,5 @@
 using System.ComponentModel.DataAnnotations;
-
+using System.Globalization;
 namespace YourLocalShop.Models;
 
 public class Payment
@@ -9,7 +9,7 @@ public class Payment
     public string CardNumber { get; set; } = "";
 
     [Required]
-    [RegularExpression(@"^(0[1-9]|1[0-2])\/\d{2}$", ErrorMessage = "Expiry must be in MM/YY format.")]
+    [RegularExpression(@"^(0[1-9]|1[0-2])\/\d{2}$", ErrorMessage = "Expiry must be in MM/YY format and card must not be expired.")]
     public string Expiry { get; set; } = "";
 
     [Required]
@@ -40,5 +40,20 @@ public class Payment
         }
 
         return sum % 10 == 0;
-    }    
+    } 
+    
+    // Simple helper to check expiry without IValidatableObject
+    public bool IsExpiryValid()
+    {
+        if (string.IsNullOrWhiteSpace(Expiry)) return false;
+
+        if (DateTime.TryParseExact(Expiry, "MM/yy", CultureInfo.InvariantCulture,
+                DateTimeStyles.None, out var parsed))
+        {
+            var lastDay = new DateTime(parsed.Year, parsed.Month, DateTime.DaysInMonth(parsed.Year, parsed.Month));
+            return lastDay >= DateTime.Today;
+        }
+
+        return false;  
+    }
 }

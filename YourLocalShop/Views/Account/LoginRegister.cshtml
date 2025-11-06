@@ -152,7 +152,7 @@
     // helpers
     const emailRe = /^[^@@\s]+@@[^@@\s]+\.[^@@\s]+$/;
     const pwdRe = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*\W).{8,}$/;
-    const phoneRe = /^\d{8,15}$/;
+    const phoneRe = /^04\d{8}$/;    
     const stateRe = /^(VIC|NSW|QLD|SA|WA|TAS|ACT|NT)$/i;
     const pcRe = /^\d{4}$/;
 
@@ -444,7 +444,7 @@
           setValid(phone, fbPhone);
           ok.phone = true;
         } else {
-          setInvalid(phone, fbPhone, 'Digits only (8–15).');
+          setInvalid(phone, fbPhone, 'Phone must start with 04 and be 10 digits total.');
           ok.phone = false;
         }
         enable();

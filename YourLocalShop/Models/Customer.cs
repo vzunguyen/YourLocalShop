@@ -4,10 +4,10 @@ namespace YourLocalShop.Models;
 
 public class Customer : User
 {
-    [Required, RegularExpression(@"^04\d{8}$", ErrorMessage = "Phone must start with 04 and be 10 digits total.")]
+    [Required, RegularExpression(@"^04\d{8}$",  ErrorMessage = "Phone number must start with 04 and be 10 digits long.")]
     public string Phone { get; set; } = "";
-
-    [Required] public Address Address { get; set; } = new();
+    
+    public Address Address { get; set; } = new();
 
     public override string Role => "Customer";
 }
