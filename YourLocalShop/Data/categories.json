@@ -1,0 +1,27 @@
+[
+  {
+    "Id": 1,
+    "Name": "Dairy",
+    "Description": "Milk, butter, cheese, yoghurt"
+  },
+  {
+    "Id": 2,
+    "Name": "Pantry",
+    "Description": "Cereal, pasta, spreads, sauces"
+  },
+  {
+    "Id": 3,
+    "Name": "Cleaning",
+    "Description": "Cleaning supplies and household products"
+  },
+  {
+    "Id": 4,
+    "Name": "Drinks",
+    "Description": "Beverages, soft drinks, juices"
+  },
+  {
+    "Id": 5,
+    "Name": "Snacks",
+    "Description": "Chips, chocolate, biscuits"
+  }
+]

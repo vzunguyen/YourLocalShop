@@ -1,0 +1,28 @@
+[
+  { "Id": 1, "Name": "Butter 250g", "Price": 4.00, "StockQty": 100, "Description": "Unsalted Butter", "CategoryId": 1 },
+  { "Id": 2, "Name": "Yoghurt 1kg", "Price": 7.00, "StockQty": 100, "Description": "Plain Greek Yogurt", "CategoryId": 1 },
+  { "Id": 3, "Name": "Milk 2L", "Price": 3.20, "StockQty": 100, "Description": "Full Cream Milk", "CategoryId": 1 },
+  { "Id": 4, "Name": "Sliced Cheese 250g", "Price": 5.50, "StockQty": 100, "Description": "Tasty Cheese 24 slices", "CategoryId": 1 },
+
+  { "Id": 5, "Name": "Corn Flakes 380g", "Price": 7.00, "StockQty": 100, "Description": "Crunchy Nut Corn Flakes Breakfast Cereal", "CategoryId": 2 },
+  { "Id": 6, "Name": "Instant Noodle 600g", "Price": 8.00, "StockQty": 100, "Description": "Spicy flavoured Instant Noodle 5 Packs", "CategoryId": 2 },
+  { "Id": 7, "Name": "Honey 500g", "Price": 9.00, "StockQty": 100, "Description": "Pure Honey 100% Australian Honey", "CategoryId": 2 },
+  { "Id": 8, "Name": "Peanut Butter 375g", "Price": 6.50, "StockQty": 100, "Description": "Smooth Natural Peanut Butter", "CategoryId": 2 },
+  { "Id": 9, "Name": "Pasta Fusilli 500g", "Price": 2.50, "StockQty": 100, "Description": "Durum Wheat Pasta", "CategoryId": 2 },
+  { "Id": 10, "Name": "BBQ Sauce 500ml", "Price": 4.20, "StockQty": 100, "Description": "Reduced Salt and Sugar BBQ Sauce", "CategoryId": 2 },
+
+  { "Id": 11, "Name": "Toilet Paper 8 Packs", "Price": 8.00, "StockQty": 100, "Description": "100% Recycled Toilet Paper", "CategoryId": 3 },
+  { "Id": 12, "Name": "Laundry Powder 2kg", "Price": 30.00, "StockQty": 100, "Description": "For Front and Top Washing Machines", "CategoryId": 3 },
+  { "Id": 13, "Name": "Dishwashing Liquid 800ml", "Price": 9.00, "StockQty": 100, "Description": "Fresh Lemon Dishwashing Liquid", "CategoryId": 3 },
+  { "Id": 14, "Name": "Glass Cleaner Spray 500ml", "Price": 5.00, "StockQty": 100, "Description": "Ammonia Free", "CategoryId": 3 },
+
+  { "Id": 15, "Name": "Tropical Juice 2L", "Price": 4.80, "StockQty": 100, "Description": "Apple, Pear and Pineapple Juice", "CategoryId": 4 },
+  { "Id": 16, "Name": "Coke 1.25L", "Price": 4.00, "StockQty": 100, "Description": "Zero Sugar Soft Drink", "CategoryId": 4 },
+  { "Id": 17, "Name": "Sparkling Water 1.25L", "Price": 3.50, "StockQty": 100, "Description": "Lightly Sparkling Water", "CategoryId": 4 },
+  { "Id": 18, "Name": "Ginger Beer 10 Packs", "Price": 17.50, "StockQty": 100, "Description": "375ml x 10 Packs", "CategoryId": 4 },
+
+  { "Id": 19, "Name": "Chocolate Block 180g", "Price": 7.50, "StockQty": 100, "Description": "60% Dark Chocolate", "CategoryId": 5 },
+  { "Id": 20, "Name": "Potato Chips 165g", "Price": 6.00, "StockQty": 100, "Description": "Ridge Cut Potato Chips", "CategoryId": 5 },
+  { "Id": 21, "Name": "Milk Arrowroot Biscuits 250g", "Price": 2.50, "StockQty": 100, "Description": "Plain Milk Arrowroot Biscuits", "CategoryId": 5 },
+  { "Id": 22, "Name": "Cream Wafers 125g", "Price": 1.25, "StockQty": 100, "Description": "Strawberry Cream Wafers", "CategoryId": 5 }
+]

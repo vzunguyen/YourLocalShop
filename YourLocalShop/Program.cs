@@ -20,8 +20,6 @@ builder.Services.AddHttpContextAccessor();
 builder.Services.AddScoped<ICartService, ShoppingCartService>();
 
 // REPOSITORIES
-builder.Services.AddSingleton<ICategoriesRepository, CategoriesRepository>();
-builder.Services.AddSingleton<IProductsRepository, ProductsRepository>();
 builder.Services.AddSingleton<ICatalogueRepository, CatalogueRepository>();
 
 builder.Services.AddSingleton<UsersRepository>();

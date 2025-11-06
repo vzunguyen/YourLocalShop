@@ -44,9 +44,10 @@ else
                 <a class="page-link"
                    asp-action="Index"
                    asp-route-q="@Model.Q"
-                   asp-route-category="@Model.Category"
+                   asp-route-categoryId="@Model.CategoryId"
                    asp-route-page="@(Model.Page - 1)"
-                   asp-route-pageSize="@Model.PageSize">Previous</a>
+                   asp-route-pageSize="@Model.PageSize">Previous
+                </a>
             </li>
 
             @for (var i = 1; i <= Model.TotalPages; i++)
@@ -55,7 +56,7 @@ else
                     <a class="page-link"
                        asp-action="Index"
                        asp-route-q="@Model.Q"
-                       asp-route-category="@Model.Category"
+                       asp-route-categoryId="@Model.CategoryId"
                        asp-route-page="@i"
                        asp-route-pageSize="@Model.PageSize">@i</a>
                 </li>
@@ -65,7 +66,7 @@ else
                 <a class="page-link"
                    asp-action="Index"
                    asp-route-q="@Model.Q"
-                   asp-route-category="@Model.Category"
+                   asp-route-categoryId="@Model.CategoryId"
                    asp-route-page="@(Model.Page + 1)"
                    asp-route-pageSize="@Model.PageSize">Next</a>
             </li>
