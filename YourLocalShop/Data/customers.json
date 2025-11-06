@@ -1,5 +1,23 @@
 [
   {
+    "Phone": "0404699759",
+    "Address": {
+      "UnitNumber": null,
+      "StreetNumber": "13",
+      "StreetName": "Kings Lane",
+      "City": "Melbourne",
+      "State": "VIC",
+      "Country": "Australia",
+      "PostCode": "3000"
+    },
+    "Role": "Customer",
+    "Id": 5,
+    "FirstName": "James",
+    "LastName": "Smith",
+    "Email": "jamessmith@mail.com",
+    "PasswordHash": "AQAAAAIAAYagAAAAEFWHaKTp/82arutWfdWaGMfq7F93ZbqIsZ6cFM/d4ozb4g8l1wNhDMLbS6vbTa8ixA=="
+  },
+  {
     "Phone": "0464654965",
     "Address": {
       "UnitNumber": null,

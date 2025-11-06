@@ -77,5 +77,91 @@
     "Status": "Successful",
     "InvoiceId": "INV-638980277471021698",
     "ReceiptId": "RCP-638980277819038259"
+  },
+  {
+    "Id": 3,
+    "CustomerId": 3,
+    "Customer": {
+      "Phone": "0464654965",
+      "Address": {
+        "UnitNumber": null,
+        "StreetNumber": "10",
+        "StreetName": "Kings Street",
+        "City": "Melbourne",
+        "State": "VIC",
+        "Country": "Australia",
+        "PostCode": "3000"
+      },
+      "Role": "Customer",
+      "Id": 10,
+      "FirstName": "Jane",
+      "LastName": "Doe",
+      "Email": "janedoe@mail.com",
+      "PasswordHash": ""
+    },
+    "OrderDate": "2025-11-06T23:14:22.6152617+11:00",
+    "Items": [
+      {
+        "ProductId": 13,
+        "Name": "Dishwashing Liquid 800ml",
+        "UnitPrice": 9.00,
+        "Quantity": 1,
+        "Subtotal": 9.00
+      }
+    ],
+    "Total": 9.00,
+    "Status": "Successful",
+    "InvoiceId": "INV-638980280626152745",
+    "ReceiptId": "RCP-638980280804744187"
+  },
+  {
+    "Id": 4,
+    "CustomerId": 5,
+    "Customer": {
+      "Phone": "0404699759",
+      "Address": {
+        "UnitNumber": "2104",
+        "StreetNumber": "13A",
+        "StreetName": "Kings Lane",
+        "City": "Melbourne",
+        "State": "VIC",
+        "Country": "Australia",
+        "PostCode": "3000"
+      },
+      "Role": "Customer",
+      "Id": 14,
+      "FirstName": "James",
+      "LastName": "Smith",
+      "Email": "jamessmith@mail.com",
+      "PasswordHash": ""
+    },
+    "OrderDate": "2025-11-07T01:13:08.324069+11:00",
+    "Items": [
+      {
+        "ProductId": 1,
+        "Name": "Butter 250g",
+        "UnitPrice": 4.00,
+        "Quantity": 1,
+        "Subtotal": 4.00
+      },
+      {
+        "ProductId": 16,
+        "Name": "Coke 1.25L",
+        "UnitPrice": 4.00,
+        "Quantity": 2,
+        "Subtotal": 8.00
+      },
+      {
+        "ProductId": 13,
+        "Name": "Dishwashing Liquid 800ml",
+        "UnitPrice": 9.00,
+        "Quantity": 1,
+        "Subtotal": 9.00
+      }
+    ],
+    "Total": 21.00,
+    "Status": "Successful",
+    "InvoiceId": "INV-638980351883240770",
+    "ReceiptId": "RCP-638980353296138678"
   }
 ]
