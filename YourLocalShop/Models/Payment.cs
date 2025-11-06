@@ -5,7 +5,7 @@ namespace YourLocalShop.Models;
 public class Payment
 {
     [Required]
-    [CreditCard(ErrorMessage = "Invalid card number.")]
+    [RegularExpression(@"^\d{15,16}$", ErrorMessage = "Card number must be 15 or 16 digits.")]
     public string CardNumber { get; set; } = "";
 
     [Required]
@@ -21,12 +21,14 @@ public class Payment
     // Luhn algorithm check
     public bool IsValidCardNumber()
     {
-        if (string.IsNullOrWhiteSpace(CardNumber)) return false;
+        if (string.IsNullOrWhiteSpace(CardNumber))
+            return false;
 
         var digits = CardNumber.Where(char.IsDigit).Select(c => c - '0').ToArray();
         int sum = 0;
         bool alternate = false;
 
+        // Luhn algorithm: process digits right-to-left
         for (int i = digits.Length - 1; i >= 0; i--)
         {
             int n = digits[i];

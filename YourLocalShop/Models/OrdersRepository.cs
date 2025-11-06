@@ -30,11 +30,8 @@ public class OrdersRepository
     {
         var orders = GetAll();
         
-        // Assign a new ID if needed (prevent duplicate IDs)
-        if (order.Id == 0)
-        {
-            order.Id = orders.Count > 0 ? orders.Max(o => o.Id) + 1 : 1;
-        }
+        // Assign a new Id
+        order.Id = orders.Count > 0 ? orders.Max(o => o.Id) + 1 : 1;
         
         orders.Add(order);
         SaveAll(orders);

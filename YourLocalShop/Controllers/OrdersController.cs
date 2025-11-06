@@ -12,12 +12,13 @@ public class OrdersController : Controller
 {
     private readonly ICartService _cart;
     private readonly UsersRepository _users;
-    private readonly OrdersRepository _ordersRepo = new();
+    private readonly OrdersRepository _ordersRepo;
 
-    public OrdersController(ICartService cart, UsersRepository users)
+    public OrdersController(ICartService cart, UsersRepository users, OrdersRepository ordersRepo)
     {
         _cart = cart;
         _users = users;
+        _ordersRepo = ordersRepo;
     }
 
     // GET: /Orders/Checkout

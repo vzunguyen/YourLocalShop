@@ -22,6 +22,6 @@ public class Address
     [RegularExpression(@"^[A-Za-z\s.'-]{2,}$")]
     public string Country { get; set; } = "Australia";
 
-    [RegularExpression(@"^\d{4}$")]
+    [RegularExpression(@"^\d{4}$", ErrorMessage = "Post code must be exactly 4 digits.")]
     public string PostCode { get; set; } = "";
 }

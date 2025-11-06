@@ -3,7 +3,7 @@
     "Id": 1,
     "CustomerId": 4,
     "Customer": {
-      "Phone": "0564135649",
+      "Phone": "0403156468",
       "Address": {
         "UnitNumber": null,
         "StreetNumber": "110",
@@ -14,21 +14,50 @@
         "PostCode": "3121"
       },
       "Role": "Customer",
-      "Id": 6,
+      "Id": 8,
       "FirstName": "Bob",
       "LastName": "Smith",
       "Email": "bobsmith@mail.com",
       "PasswordHash": ""
     },
-    "OrderDate": "2025-11-06T22:25:57.0373681+11:00",
+    "OrderDate": "2025-11-06T23:06:51.6114081+11:00",
     "Items": [
       {
-        "ProductId": 10,
-        "Name": "BBQ Sauce 500ml",
-        "UnitPrice": 4.20,
+        "ProductId": 1,
+        "Name": "Butter 250g",
+        "UnitPrice": 4.00,
         "Quantity": 1,
-        "Subtotal": 4.20
+        "Subtotal": 4.00
+      }
+    ],
+    "Total": 4.00,
+    "Status": "Successful",
+    "InvoiceId": "INV-638980276116116365",
+    "ReceiptId": "RCP-638980276810863894"
+  },
+  {
+    "Id": 2,
+    "CustomerId": 4,
+    "Customer": {
+      "Phone": "0403156468",
+      "Address": {
+        "UnitNumber": null,
+        "StreetNumber": "110",
+        "StreetName": "Queens Street",
+        "City": "Richmond",
+        "State": "VIC",
+        "Country": "Australia",
+        "PostCode": "3121"
       },
+      "Role": "Customer",
+      "Id": 13,
+      "FirstName": "Bob",
+      "LastName": "Smith",
+      "Email": "bobsmith@mail.com",
+      "PasswordHash": ""
+    },
+    "OrderDate": "2025-11-06T23:09:07.1021667+11:00",
+    "Items": [
       {
         "ProductId": 16,
         "Name": "Coke 1.25L",
@@ -37,16 +66,16 @@
         "Subtotal": 4.00
       },
       {
-        "ProductId": 13,
-        "Name": "Dishwashing Liquid 800ml",
-        "UnitPrice": 9.00,
+        "ProductId": 14,
+        "Name": "Glass Cleaner Spray 500ml",
+        "UnitPrice": 5.00,
         "Quantity": 1,
-        "Subtotal": 9.00
+        "Subtotal": 5.00
       }
     ],
-    "Total": 17.20,
+    "Total": 9.00,
     "Status": "Successful",
-    "InvoiceId": "INV-638980251570374079",
-    "ReceiptId": "RCP-638980253155899363"
+    "InvoiceId": "INV-638980277471021698",
+    "ReceiptId": "RCP-638980277819038259"
   }
 ]
