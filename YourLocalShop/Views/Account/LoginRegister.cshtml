@@ -11,7 +11,7 @@
       <div class="card shadow-sm">
         <div class="card-body p-4">
           <div class="d-flex justify-content-between align-items-center mb-3">
-            <h3 class="m-0">@(startOnRegister ? "Create account" : "Welcome")</h3>
+            <h3 id="formHeading" class="m-0">@(startOnRegister ? "Create account" : "Log in")</h3>
             <button id="toggleForm" class="btn btn-sm btn-outline-secondary">
               @(startOnRegister ? "Have an account? Log in" : "New here? Create account")
             </button>
@@ -177,11 +177,20 @@
     const toggleBtn = document.getElementById('toggleForm');
     const loginSec = document.getElementById('loginSection');
     const regSec = document.getElementById('registerSection');
+    const heading = document.getElementById('formHeading');
     if (toggleBtn) {
       toggleBtn.addEventListener('click', () => {
         loginSec.classList.toggle('d-none');
         regSec.classList.toggle('d-none');
-        toggleBtn.textContent = regSec.classList.contains('d-none') ? 'New here? Create account' : 'Have an account? Log in';
+        if (regSec.classList.contains('d-none')) {
+          // showing login
+          toggleBtn.textContent = 'New here? Create account';
+          heading.textContent = 'Log in';
+        } else {
+          // showing register
+          toggleBtn.textContent = 'Have an account? Log in';
+          heading.textContent = 'Create account';
+        }
       });
     }
 
