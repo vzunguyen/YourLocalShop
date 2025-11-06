@@ -1,18 +1,16 @@
-using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using YourLocalShop.Models;
+using Microsoft.Extensions.Logging;
 
-namespace YourLocalShop.Controllers;
-
-public class HomeController : Controller
+namespace YourLocalShop.Controllers
 {
-    public IActionResult Index()
+    public class HomeController(ILogger<HomeController> logger) : Controller
     {
-        return View();
-    }
+        private readonly ILogger<HomeController> _logger = logger;
 
-    public IActionResult Account()
-    {
-        return View();
+        [HttpGet]
+        public IActionResult Index() => View();
+
+        [HttpGet]
+        public IActionResult Account() => RedirectToAction("Account", "Account");
     }
 }

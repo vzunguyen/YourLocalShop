@@ -1,0 +1,304 @@
+@using YourLocalShop.Models.ViewModels
+@model AccountVm
+
+@{
+    ViewData["Title"] = "My Account";
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-7">
+            <div class="card shadow-sm">
+                <div class="card-body p-4">
+
+                    <h3 class="mb-3">Account Settings</h3>
+
+                    @* Success / Error Messages *@
+                    @if (ViewBag.Saved == true)
+                    {
+                        <div class="alert alert-success">Account details saved!</div>
+                    }
+
+                    @if (TempData["pwd_ok"] is string okMsg)
+                    {
+                        <div class="alert alert-success">@okMsg</div>
+                    }
+
+                    @if (TempData["pwd_error"] is string errMsg)
+                    {
+                        <div class="alert alert-danger">@errMsg</div>
+                    }
+
+                    @* Update Account Form *@
+                    <form asp-action="Update" asp-controller="Account" method="post" novalidate>
+                        @Html.AntiForgeryToken()
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Email (cannot change)</label>
+                            <input class="form-control" value="@Model.Email" disabled/>
+                            <input type="hidden" asp-for="Email"/>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label asp-for="FirstName" class="form-label"></label>
+                                <input asp-for="FirstName" class="form-control"/>
+                                <span asp-validation-for="FirstName" class="text-danger"></span>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label asp-for="LastName" class="form-label"></label>
+                                <input asp-for="LastName" class="form-control"/>
+                                <span asp-validation-for="LastName" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Phone" class="form-label"></label>
+                            <input asp-for="Phone" class="form-control" inputmode="numeric" pattern="\d{8,15}"/>
+                            <span asp-validation-for="Phone" class="text-danger"></span>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-4 mb-3">
+                                <label asp-for="StreetNumber" class="form-label"></label>
+                                <input asp-for="StreetNumber" class="form-control" inputmode="numeric"/>
+                                <span asp-validation-for="StreetNumber" class="text-danger"></span>
+                            </div>
+                            <div class="col-8 mb-3">
+                                <label asp-for="StreetName" class="form-label"></label>
+                                <input asp-for="StreetName" class="form-control"/>
+                                <span asp-validation-for="StreetName" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label asp-for="City" class="form-label"></label>
+                                <input asp-for="City" class="form-control"/>
+                                <span asp-validation-for="City" class="text-danger"></span>
+                            </div>
+                            <div class="col-md-3 mb-3">
+                                <label asp-for="State" class="form-label"></label>
+                                <input asp-for="State" class="form-control" placeholder="VIC"/>
+                                <span asp-validation-for="State" class="text-danger"></span>
+                            </div>
+                            <div class="col-md-3 mb-3">
+                                <label asp-for="PostCode" class="form-label"></label>
+                                <input asp-for="PostCode" class="form-control" inputmode="numeric" pattern="\d{4}"/>
+                                <span asp-validation-for="PostCode" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Country" class="form-label"></label>
+                            <input asp-for="Country" class="form-control" value="Australia"/>
+                            <span asp-validation-for="Country" class="text-danger"></span>
+                        </div>
+
+                        <div class="d-flex justify-content-between mt-2">
+                            <button class="btn btn-primary" type="submit">Save changes</button>
+                        </div>
+                    </form>
+
+                    @* Change Password Section *@
+                    <hr/>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <span class="text-muted">Security</span>
+                        <button class="btn btn-sm btn-outline-secondary"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#changePwdCollapse"
+                                aria-expanded="false"
+                                aria-controls="changePwdCollapse">
+                            Change password
+                        </button>
+                    </div>
+
+                    <div class="collapse mt-3" id="changePwdCollapse">
+                        <form id="changePwdForm"
+                              asp-action="ChangePassword"
+                              asp-controller="Account"
+                              method="post"
+                              class="border rounded p-3 bg-light needs-validation"
+                              novalidate>
+                            @Html.AntiForgeryToken()
+
+                            <!-- Old password -->
+                            <div class="mb-3">
+                                <label class="form-label" for="OldPassword">Old password</label>
+                                <input id="OldPassword" name="OldPassword" type="password" class="form-control"
+                                       required/>
+                                <div id="oldPwdFeedback" class="invalid-feedback"></div>
+                            </div>
+
+                            <!-- New password -->
+                            <div class="mb-3">
+                                <label class="form-label" for="NewPassword">New password</label>
+                                <input id="NewPassword" name="NewPassword" type="password" class="form-control" required
+                                       pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*\W).{8,}"/>
+                                <small class="text-muted">8+ chars, upper, lower, number, symbol</small>
+                                <div id="newPwdFeedback" class="invalid-feedback"></div>
+                            </div>
+
+                            <!-- Confirm -->
+                            <div class="mb-3">
+                                <label class="form-label" for="ConfirmNewPassword">Confirm new password</label>
+                                <input id="ConfirmNewPassword" name="ConfirmNewPassword" type="password"
+                                       class="form-control" required/>
+                                <div id="confirmPwdFeedback" class="invalid-feedback"></div>
+                            </div>
+
+                            <div class="text-end">
+                                <button id="submitChangePwd" type="submit" class="btn btn-secondary">Update password
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+
+                    @section Scripts {
+                        <script>
+                            const addValid = (el) => {
+                                el.classList.add('is-valid');
+                                el.classList.remove('is-invalid');
+                            }
+                            const addInvalid = (el, msgBox, msg) => {
+                                el.classList.add('is-invalid');
+                                el.classList.remove('is-valid');
+                                if (msgBox) msgBox.textContent = msg || 'Invalid';
+                            }
+                            const clearState = (el, msgBox) => {
+                                el.classList.remove('is-valid', 'is-invalid');
+                                if (msgBox) msgBox.textContent = '';
+                            }
+
+                            document.addEventListener('DOMContentLoaded', () => {
+                                const form = document.getElementById('changePwdForm');
+                                if (!form) return;
+
+                                const oldPwd = document.getElementById('OldPassword');
+                                const newPwd = document.getElementById('NewPassword');
+                                const confirmPw = document.getElementById('ConfirmNewPassword');
+
+                                const oldMsg = document.getElementById('oldPwdFeedback');
+                                const newMsg = document.getElementById('newPwdFeedback');
+                                const confMsg = document.getElementById('confirmPwdFeedback');
+
+                                const token = form.querySelector('input[name="__RequestVerificationToken"]').value;
+
+                                // validate old password
+                                let oldPwdTimer;
+                                oldPwd.addEventListener('input', () => {
+                                    clearTimeout(oldPwdTimer);
+                                    clearState(oldPwd, oldMsg);
+                                    if (!oldPwd.value) return;
+
+                                    oldPwdTimer = setTimeout(async () => {
+                                        try {
+                                            const resp = await fetch('@Url.Action("ValidateOldPassword", "Account")', {
+                                                method: 'POST',
+                                                headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+                                                body: new URLSearchParams({
+                                                    oldPassword: oldPwd.value,
+                                                    __RequestVerificationToken: token
+                                                })
+                                            });
+                                            const data = await resp.json();
+                                            if (data.ok) {
+                                                addValid(oldPwd);
+                                                oldMsg.textContent = '';
+                                            } else {
+                                                addInvalid(oldPwd, oldMsg, data.message || 'Old password is incorrect.');
+                                            }
+                                        } catch (e) {
+                                            addInvalid(oldPwd, oldMsg, 'Could not verify password right now.');
+                                        }
+                                    }, 300);
+                                });
+
+                                // validate new password strength
+                                const strengthRe = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*\W).{8,}$/;
+                                const validateNew = () => {
+                                    if (!newPwd.value) {
+                                        clearState(newPwd, newMsg);
+                                        return false;
+                                    }
+                                    if (strengthRe.test(newPwd.value)) {
+                                        addValid(newPwd);
+                                        newMsg.textContent = '';
+                                        return true;
+                                    }
+                                    addInvalid(newPwd, newMsg, 'Needs upper, lower, number, symbol, 8+ chars.');
+                                    return false;
+                                };
+                                newPwd.addEventListener('input', () => {
+                                    validateNew();
+                                    validateConfirm();
+                                });
+
+                                // validate confirm matches
+                                const validateConfirm = () => {
+                                    if (!confirmPw.value) {
+                                        clearState(confirmPw, confMsg);
+                                        return false;
+                                    }
+                                    if (confirmPw.value === newPwd.value) {
+                                        addValid(confirmPw);
+                                        confMsg.textContent = '';
+                                        return true;
+                                    }
+                                    addInvalid(confirmPw, confMsg, 'Passwords do not match.');
+                                    return false;
+                                };
+                                confirmPw.addEventListener('input', validateConfirm);
+
+                                // final form submission validation
+                                form.addEventListener('submit', async (e) => {
+                                    let ok = true;
+                                    
+                                    if (!oldPwd.classList.contains('is-valid')) {
+                                        e.preventDefault();
+                                        try {
+                                            const resp = await fetch('@Url.Action("ValidateOldPassword", "Account")', {
+                                                method: 'POST',
+                                                headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+                                                body: new URLSearchParams({
+                                                    oldPassword: oldPwd.value,
+                                                    __RequestVerificationToken: token
+                                                })
+                                            });
+                                            const data = await resp.json();
+                                            if (data.ok) addValid(oldPwd); else {
+                                                addInvalid(oldPwd, oldMsg, data.message || 'Old password is incorrect.');
+                                                ok = false;
+                                            }
+                                        } catch {
+                                            addInvalid(oldPwd, oldMsg, 'Could not verify password.');
+                                            ok = false;
+                                        }
+                                    }
+
+                                    if (!validateNew()) ok = false;
+                                    if (!validateConfirm()) ok = false;
+
+                                    if (!ok) e.preventDefault();
+                                });
+                            });
+                        </script>
+                    }
+
+                    @* Logout button *@
+                    <div class="mt-3 text-end">
+                        <form asp-action="Logout" asp-controller="Account" method="post" class="m-0">
+                            @Html.AntiForgeryToken()
+                            <button type="submit" class="btn btn-outline-danger">
+                                Logout
+                            </button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

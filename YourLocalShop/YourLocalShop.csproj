@@ -8,6 +8,8 @@
 
     <ItemGroup>
       <_ContentIncludedByDefault Remove="Views\Components\SearchBar.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Account\Login.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Account\Register.cshtml" />
     </ItemGroup>
 
 </Project>

@@ -1,5 +1,6 @@
 using YourLocalShop.Models;
 using YourLocalShop.Services;
+using Microsoft.AspNetCore.Authentication.Cookies;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -23,6 +24,17 @@ builder.Services.AddSingleton<ICategoriesRepository, CategoriesRepository>();
 builder.Services.AddSingleton<IProductsRepository, ProductsRepository>();
 builder.Services.AddSingleton<ICatalogueRepository, CatalogueRepository>();
 
+builder.Services.AddSingleton<UsersRepository>();
+
+builder.Services
+    .AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+    .AddCookie(o =>
+    {
+        o.LoginPath = "/Account/LoginOnly";
+        o.LogoutPath = "/Account/Logout";
+        o.AccessDeniedPath = "/Account/LoginOnly";
+    });
+
 var app = builder.Build();
 
 // Pipeline
@@ -33,10 +45,13 @@ if (!app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-// app.UseStaticFiles();
+// If you’re not using MapStaticAssets for everything, also enable:
+app.UseStaticFiles();
 
 app.UseRouting();
 
+// If you add Identity later, place UseAuthentication BEFORE UseAuthorization:
+app.UseAuthentication();
 // Enable session before auth/authorization/endpoints
 app.UseSession();
 
