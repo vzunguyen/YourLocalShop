@@ -9,7 +9,7 @@ using YourLocalShop.Models.ViewModels;
 
 namespace YourLocalShop.Controllers
 {
-    public class AccountController(InMemoryUserStore users) : Controller
+    public class AccountController(UsersRepository users) : Controller
     {
         // GET: /Account/LoginOnly
         [HttpGet]

@@ -3,14 +3,14 @@ using System.Collections.Concurrent;
 
 namespace YourLocalShop.Models;
 
-public class InMemoryUserStore
+public class UsersRepository 
 {
     private readonly ConcurrentDictionary<string, User> _users =
         new(StringComparer.OrdinalIgnoreCase);
 
     public PasswordHasher<User> Hasher { get; } = new();
 
-    public InMemoryUserStore()
+    public UsersRepository()
     {
         var admin = new Employee
         {
