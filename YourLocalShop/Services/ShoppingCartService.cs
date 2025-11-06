@@ -5,24 +5,24 @@ namespace YourLocalShop.Services;
 
 public interface ICartService
 {
-    Cart Get();
+    ShoppingCart Get();
     void Add(int productId, string name, decimal unitPrice, int quantity = 1);
     void UpdateQuantity(int productId, int quantity);
     void Remove(int productId);
     void Clear();
 }
 
-public class CartService : ICartService
+public class ShoppingCartService : ICartService
 {
     private const string SessionKey = "YLShop.Cart";
     private readonly IHttpContextAccessor _http;
 
-    public CartService(IHttpContextAccessor http)
+    public ShoppingCartService(IHttpContextAccessor http)
     {
         _http = http;
     }
 
-    public Cart Get() => GetOrCreate();
+    public ShoppingCart Get() => GetOrCreate();
 
     public void Add(int productId, string name, decimal unitPrice, int quantity = 1)
     {
@@ -33,7 +33,7 @@ public class CartService : ICartService
 
         if (item is null)
         {
-            cart.Items.Add(new CartItem
+            cart.Items.Add(new ShoppingCartItem
             {
                 ProductId = productId,
                 Name = name,
@@ -72,26 +72,26 @@ public class CartService : ICartService
 
     public void Clear()
     {
-        Save(new Cart());
+        Save(new ShoppingCart());
     }
 
-    private Cart GetOrCreate()
+    private ShoppingCart GetOrCreate()
     {
         var json = _http.HttpContext?.Session.GetString(SessionKey);
-        if (string.IsNullOrEmpty(json)) return new Cart();
+        if (string.IsNullOrEmpty(json)) return new ShoppingCart();
         try
         {
-            return JsonSerializer.Deserialize<Cart>(json) ?? new Cart();
+            return JsonSerializer.Deserialize<ShoppingCart>(json) ?? new ShoppingCart();
         }
         catch
         {
-            return new Cart();
+            return new ShoppingCart();
         }
     }
 
-    private void Save(Cart cart)
+    private void Save(ShoppingCart shoppingCart)
     {
-        var json = JsonSerializer.Serialize(cart);
+        var json = JsonSerializer.Serialize(shoppingCart);
         _http.HttpContext?.Session.SetString(SessionKey, json);
     }
 }

@@ -4,12 +4,12 @@ using YourLocalShop.Services;
 
 namespace YourLocalShop.Controllers;
 
-public class CartController : Controller
+public class ShoppingCartController : Controller
 {
     private readonly ICartService _cart;
     private readonly ICatalogueRepository _catalogue;
 
-    public CartController(ICartService cart, ICatalogueRepository catalogue)
+    public ShoppingCartController(ICartService cart, ICatalogueRepository catalogue)
     {
         _cart = cart;
         _catalogue = catalogue;

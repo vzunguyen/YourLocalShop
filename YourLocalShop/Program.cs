@@ -16,7 +16,7 @@ builder.Services.AddSession(options =>
     options.Cookie.IsEssential = true;
 });
 builder.Services.AddHttpContextAccessor();
-builder.Services.AddScoped<ICartService, CartService>();
+builder.Services.AddScoped<ICartService, ShoppingCartService>();
 
 // REPOSITORIES
 builder.Services.AddSingleton<ICategoriesRepository, CategoriesRepository>();
