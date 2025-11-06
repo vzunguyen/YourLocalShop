@@ -75,25 +75,24 @@ namespace YourLocalShop.Controllers
                 return View("LoginRegister", new AuthPageVm { Register = vm, ActiveTab = "register" });
             }
 
-            var customer = new Customer
+            var customer = users.RegisterCustomer(
+                vm.FirstName,
+                vm.LastName,
+                vm.Email,
+                vm.Phone,
+                vm.Password
+            );
+            customer.Address = new Address
             {
-                FirstName = vm.FirstName,
-                LastName = vm.LastName,
-                Email = vm.Email,
-                Phone = vm.Phone,
-                Address = new Address
-                {
-                    StreetNumber = vm.StreetNumber,
-                    StreetName = vm.StreetName,
-                    City = vm.City,
-                    State = vm.State,
-                    Country = vm.Country,
-                    PostCode = vm.PostCode
-                }
+                StreetNumber = vm.StreetNumber,
+                StreetName = vm.StreetName,
+                City = vm.City,
+                State = vm.State,
+                Country = vm.Country,
+                PostCode = vm.PostCode
             };
-            customer.PasswordHash = users.Hasher.HashPassword(customer, vm.Password);
-            users.Add(customer);
-
+            users.Update(customer);
+            
             await SignInAsync(customer);
             return RedirectToAction(nameof(Settings));
         }
@@ -207,14 +206,22 @@ namespace YourLocalShop.Controllers
 
             var email = User.FindFirstValue(ClaimTypes.Email);
             var user = users.FindByEmail(email);
-            if (user == null)
+
+            if (user is Employee)
+            {
+                TempData["pwd_error"] = "Admin password cannot be changed.";
+                return RedirectToAction(nameof(Settings));
+            }
+
+            var customer = user as Customer;
+            if (customer == null)
             {
                 TempData["pwd_error"] = "User not found.";
                 return RedirectToAction(nameof(Account));
             }
 
             // verify old password
-            var ok = users.Hasher.VerifyHashedPassword(user, user.PasswordHash, vm.OldPassword)
+            var ok = users.Hasher.VerifyHashedPassword(customer, customer.PasswordHash, vm.OldPassword)
                      != PasswordVerificationResult.Failed;
             if (!ok)
             {
@@ -223,12 +230,13 @@ namespace YourLocalShop.Controllers
             }
 
             // set new password
-            user.PasswordHash = users.Hasher.HashPassword(user, vm.NewPassword);
-            users.Update(user);
+            customer.PasswordHash = users.Hasher.HashPassword(customer, vm.NewPassword);
+            users.Update(customer);
 
             TempData["pwd_ok"] = "Password changed successfully.";
             return RedirectToAction(nameof(Settings));
         }
+
 
         // POST: /Account/ValidateOldPassword
         [HttpPost]

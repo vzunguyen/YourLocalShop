@@ -4,6 +4,9 @@ namespace YourLocalShop.Models;
 
 public class Address
 {
+    [RegularExpression(@"^\d{1,4}$", ErrorMessage = "Unit number must be 1–4 digits.")]
+    public string? UnitNumber { get; set; }   // optional
+    
     [Required, RegularExpression(@"^\d+[A-Za-z]?$")]
     public string StreetNumber { get; set; } = "";
 

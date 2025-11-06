@@ -1,0 +1,38 @@
+[
+  {
+    "Phone": "0404282837",
+    "Address": {
+      "UnitNumber": null,
+      "StreetNumber": "12",
+      "StreetName": "Queens Lane",
+      "City": "Melbourne",
+      "State": "VIC",
+      "Country": "Australia",
+      "PostCode": "3004"
+    },
+    "Role": "Customer",
+    "Id": 0,
+    "FirstName": "Jane",
+    "LastName": "Doe",
+    "Email": "janedoe@mail.com",
+    "PasswordHash": "AQAAAAIAAYagAAAAEFBwpk6uOOzOlIENZCG1oODg7Tva8cbJGmHgYNfhaaKciOiAB\u002Bwux3XojwIyYymifQ=="
+  },
+  {
+    "Phone": "0404282837",
+    "Address": {
+      "UnitNumber": null,
+      "StreetNumber": "12",
+      "StreetName": "Queens Lane",
+      "City": "Melbourne",
+      "State": "VIC",
+      "Country": "Australia",
+      "PostCode": "3004"
+    },
+    "Role": "Customer",
+    "Id": 0,
+    "FirstName": "John",
+    "LastName": "Doe",
+    "Email": "johndoe@mail.com",
+    "PasswordHash": "AQAAAAIAAYagAAAAEOt5iiaZXA2IIgXtGlLBaa2gokUb2A\u002B\u002Bb5qJT/Ml6KbpPTYpbHeWbsg3mbsWeti6lQ=="
+  }
+]

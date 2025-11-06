@@ -33,7 +33,7 @@ public class ShoppingCartService : ICartService
 
         if (item is null)
         {
-            cart.Items.Add(new ShoppingCartItem
+            cart.Items.Add(new OrderItem
             {
                 ProductId = productId,
                 Name = name,
