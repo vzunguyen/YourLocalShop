@@ -47,12 +47,16 @@ The application is deployed as a **web application**.
 - Click the "Run" button to compile and execute.
 - The application will launch in the browser automatically.
 
+---
+
 ### Architecture
 The system follows a Layered Architecure with four layers:
 - Presentation Layer (MVC controllers and views)
 - Service Layer (business logic services)
 - Data Access Layer (repositories)
 - Data Layer (domain models and JSON persistence)
+
+---
 
 ### License
 This project is for academic purpose. No commercial license is applied.
