@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace YourLocalShop.Models.ViewModels;
 
 public class CheckoutVm

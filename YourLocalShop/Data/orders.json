@@ -163,5 +163,55 @@
     "Status": "Successful",
     "InvoiceId": "INV-638980351883240770",
     "ReceiptId": "RCP-638980353296138678"
+  },
+  {
+    "Id": 5,
+    "CustomerId": 6,
+    "Customer": {
+      "Phone": "0404444000",
+      "Address": {
+        "UnitNumber": null,
+        "StreetNumber": "15b",
+        "StreetName": "Shop Street",
+        "City": "Newtown",
+        "State": "NSW",
+        "Country": "Australia",
+        "PostCode": "2020"
+      },
+      "Role": "Customer",
+      "Id": 16,
+      "FirstName": "Fred",
+      "LastName": "Shopper",
+      "Email": "fred@shopper.com",
+      "PasswordHash": ""
+    },
+    "OrderDate": "2025-11-07T12:07:51.923283+11:00",
+    "Items": [
+      {
+        "ProductId": 10,
+        "Name": "BBQ Sauce 500ml",
+        "UnitPrice": 4.20,
+        "Quantity": 3,
+        "Subtotal": 12.60
+      },
+      {
+        "ProductId": 6,
+        "Name": "Instant Noodle 600g",
+        "UnitPrice": 8.00,
+        "Quantity": 7,
+        "Subtotal": 56.00
+      },
+      {
+        "ProductId": 13,
+        "Name": "Dishwashing Liquid 800ml",
+        "UnitPrice": 9.00,
+        "Quantity": 1,
+        "Subtotal": 9.00
+      }
+    ],
+    "Total": 77.60,
+    "Status": "Successful",
+    "InvoiceId": "INV-638980744719232950",
+    "ReceiptId": "RCP-638980746612813450"
   }
 ]

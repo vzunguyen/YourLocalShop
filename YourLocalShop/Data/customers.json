@@ -36,6 +36,24 @@
     "PasswordHash": "AQAAAAIAAYagAAAAED7/HeHxx8Td\u002BRGpr\u002BGdfLt2SY2OT1UAz5iyklTMZwa1TwPOFAz0\u002B9Q/oZ/bEfIHYA=="
   },
   {
+    "Phone": "0404444000",
+    "Address": {
+      "UnitNumber": null,
+      "StreetNumber": "15b",
+      "StreetName": "Shop Street",
+      "City": "Newtown",
+      "State": "NSW",
+      "Country": "Australia",
+      "PostCode": "2020"
+    },
+    "Role": "Customer",
+    "Id": 6,
+    "FirstName": "Fred",
+    "LastName": "Shopper",
+    "Email": "fred@shopper.com",
+    "PasswordHash": "AQAAAAIAAYagAAAAEBH0otdFeXN4Xl6xG9eMWSY\u002BV5yubfc4NBEM624RMFmeQW5lry2cvY0sFEc\u002BxvO9iQ=="
+  },
+  {
     "Phone": "0403156468",
     "Address": {
       "UnitNumber": null,

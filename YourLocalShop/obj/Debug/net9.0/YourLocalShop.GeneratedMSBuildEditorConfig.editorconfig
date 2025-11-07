@@ -9,77 +9,77 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = YourLocalShop
 build_property.RootNamespace = YourLocalShop
-build_property.ProjectDir = C:\parkinkyung\GitHub\YourLocalShop\YourLocalShop\
+build_property.ProjectDir = /Users/douhaassafiri/Documents/uni/SWE30003 - Software Architectures and Design/assignment03/YourLocalShop/YourLocalShop/
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 9.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\parkinkyung\GitHub\YourLocalShop\YourLocalShop
+build_property.MSBuildProjectDirectory = /Users/douhaassafiri/Documents/uni/SWE30003 - Software Architectures and Design/assignment03/YourLocalShop/YourLocalShop
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 9.0
 build_property.EnableCodeStyleSeverity = 
 
-[C:/parkinkyung/GitHub/YourLocalShop/YourLocalShop/Views/Account/LoginRegister.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpblJlZ2lzdGVyLmNzaHRtbA==
+[/Users/douhaassafiri/Documents/uni/SWE30003 - Software Architectures and Design/assignment03/YourLocalShop/YourLocalShop/Views/Account/LoginRegister.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9Mb2dpblJlZ2lzdGVyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/parkinkyung/GitHub/YourLocalShop/YourLocalShop/Views/Account/OrderHistory.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxPcmRlckhpc3RvcnkuY3NodG1s
+[/Users/douhaassafiri/Documents/uni/SWE30003 - Software Architectures and Design/assignment03/YourLocalShop/YourLocalShop/Views/Account/OrderHistory.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9PcmRlckhpc3RvcnkuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/parkinkyung/GitHub/YourLocalShop/YourLocalShop/Views/Account/Settings.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxTZXR0aW5ncy5jc2h0bWw=
+[/Users/douhaassafiri/Documents/uni/SWE30003 - Software Architectures and Design/assignment03/YourLocalShop/YourLocalShop/Views/Account/Settings.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9TZXR0aW5ncy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/parkinkyung/GitHub/YourLocalShop/YourLocalShop/Views/Employee/Dashboard.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcRGFzaGJvYXJkLmNzaHRtbA==
+[/Users/douhaassafiri/Documents/uni/SWE30003 - Software Architectures and Design/assignment03/YourLocalShop/YourLocalShop/Views/Employee/Dashboard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRW1wbG95ZWUvRGFzaGJvYXJkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/parkinkyung/GitHub/YourLocalShop/YourLocalShop/Views/Home/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+[/Users/douhaassafiri/Documents/uni/SWE30003 - Software Architectures and Design/assignment03/YourLocalShop/YourLocalShop/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/parkinkyung/GitHub/YourLocalShop/YourLocalShop/Views/Orders/Checkout.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJzXENoZWNrb3V0LmNzaHRtbA==
+[/Users/douhaassafiri/Documents/uni/SWE30003 - Software Architectures and Design/assignment03/YourLocalShop/YourLocalShop/Views/Orders/Checkout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvT3JkZXJzL0NoZWNrb3V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/parkinkyung/GitHub/YourLocalShop/YourLocalShop/Views/Orders/Invoice.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJzXEludm9pY2UuY3NodG1s
+[/Users/douhaassafiri/Documents/uni/SWE30003 - Software Architectures and Design/assignment03/YourLocalShop/YourLocalShop/Views/Orders/Invoice.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvT3JkZXJzL0ludm9pY2UuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/parkinkyung/GitHub/YourLocalShop/YourLocalShop/Views/Orders/Receipt.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJzXFJlY2VpcHQuY3NodG1s
+[/Users/douhaassafiri/Documents/uni/SWE30003 - Software Architectures and Design/assignment03/YourLocalShop/YourLocalShop/Views/Orders/Receipt.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvT3JkZXJzL1JlY2VpcHQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/parkinkyung/GitHub/YourLocalShop/YourLocalShop/Views/Products/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdHNcRGV0YWlscy5jc2h0bWw=
+[/Users/douhaassafiri/Documents/uni/SWE30003 - Software Architectures and Design/assignment03/YourLocalShop/YourLocalShop/Views/Products/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZHVjdHMvRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/parkinkyung/GitHub/YourLocalShop/YourLocalShop/Views/Products/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdHNcSW5kZXguY3NodG1s
+[/Users/douhaassafiri/Documents/uni/SWE30003 - Software Architectures and Design/assignment03/YourLocalShop/YourLocalShop/Views/Products/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZHVjdHMvSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/parkinkyung/GitHub/YourLocalShop/YourLocalShop/Views/Products/_ProductCard.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdHNcX1Byb2R1Y3RDYXJkLmNzaHRtbA==
+[/Users/douhaassafiri/Documents/uni/SWE30003 - Software Architectures and Design/assignment03/YourLocalShop/YourLocalShop/Views/Products/_ProductCard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZHVjdHMvX1Byb2R1Y3RDYXJkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/parkinkyung/GitHub/YourLocalShop/YourLocalShop/Views/Shared/_ValidationScriptsPartial.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+[/Users/douhaassafiri/Documents/uni/SWE30003 - Software Architectures and Design/assignment03/YourLocalShop/YourLocalShop/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/parkinkyung/GitHub/YourLocalShop/YourLocalShop/Views/ShoppingCart/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hvcHBpbmdDYXJ0XEluZGV4LmNzaHRtbA==
+[/Users/douhaassafiri/Documents/uni/SWE30003 - Software Architectures and Design/assignment03/YourLocalShop/YourLocalShop/Views/ShoppingCart/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hvcHBpbmdDYXJ0L0luZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/parkinkyung/GitHub/YourLocalShop/YourLocalShop/Views/_ViewImports.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+[/Users/douhaassafiri/Documents/uni/SWE30003 - Software Architectures and Design/assignment03/YourLocalShop/YourLocalShop/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/parkinkyung/GitHub/YourLocalShop/YourLocalShop/Views/_ViewStart.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+[/Users/douhaassafiri/Documents/uni/SWE30003 - Software Architectures and Design/assignment03/YourLocalShop/YourLocalShop/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/parkinkyung/GitHub/YourLocalShop/YourLocalShop/Views/Shared/_Layout.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = b-4k5lgw3nv9
+[/Users/douhaassafiri/Documents/uni/SWE30003 - Software Architectures and Design/assignment03/YourLocalShop/YourLocalShop/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-w095e0brri
